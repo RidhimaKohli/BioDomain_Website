@@ -11,6 +11,25 @@
     </head>
     <body>
     <h1>List of Equip</h1>
-        <script src="" async defer></script>
+    <table>
+	<thead>
+		<tr>
+			<th>e_name</th>
+			<th>category</th>
+			<th>institute</th>
+			<th>location</th>
+		</tr>
+	</thead>
+	<tbody>
+    {% for e in equipments %}
+		<tr>
+			<td>{{e.e_name}}</td>
+			<td>{{e.category}}</td>
+			<td>{{e.institute}}</td>
+			<td>{{e.city}}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
     </body>
 </html>
