@@ -12,3 +12,14 @@ def listpage(request):
     allEquip = Equipments.objects.all()
     context={'equipments':allEquip}
     return render(request,'listpage.html', context)
+
+
+
+# def multiSearch(request):
+#     if request.method == 'POST':
+#         category=request.POST.get("category")
+#         eqpobj=Equipments.objects.raw('select * from Equipments where category="'+category+'"')
+#         return render(request,'listpage.html',{'Equipments':eqpobj})
+#     else:
+#         eqpobj=Equipments.objects.raw('select * from Equipments')
+#         return render(request,'listpage.html',{'Equipments':eqpobj})
