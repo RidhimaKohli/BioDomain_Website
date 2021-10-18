@@ -1,5 +1,8 @@
 from django.contrib import admin
 from website.models import Equipments
+from import_export.admin import ImportExportModelAdmin
+from .models import *
+admin.site.register(Equipments,ImportExportModelAdmin)
 
-admin.site.register(Equipments)
-# Register your models here.
+class ViewAdmin(ImportExportModelAdmin):
+    pass
