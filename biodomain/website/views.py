@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from website.models import Instruments
+from website.models import Institute
+from website.models import Category_Description
 # Create your views here.
 
 
@@ -13,7 +15,15 @@ def InstrumentListpage(request):
     context={'instruments':allInst}
     return render(request,'instrumentlistpage.html', context)
 
+def InstituteListpage(request):
+    allInst = Institute.objects.all()
+    context={'institute':allInst}
+    return render(request,'institutelistpage.html', context)
 
+def CategoryListpage(request):
+    allCategory = Category_Description.objects.all()
+    context={'category':allCategory}
+    return render(request,'categorylistpage.html',context)
 
 # def multiSearch(request):
 #     if request.method == 'POST':
