@@ -1,4 +1,4 @@
-#!d:\coding\gitrepo\biodomain_website\env\scripts\python.exe
+#!C:\Users\LENOVO\Desktop\BioDomain_Website - Copy\env\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from website.models import Equipments
+from website.models import Instruments
 # Create your views here.
 
 
@@ -8,10 +8,10 @@ def home(request):
 
 
 
-def listpage(request):
-    allEquip = Equipments.objects.all()
-    context={'equipments':allEquip}
-    return render(request,'listpage.html', context)
+def InstrumentListpage(request):
+    allInst = Instruments.objects.all()
+    context={'instruments':allInst}
+    return render(request,'instrumentlistpage.html', context)
 
 
 
