@@ -131,7 +131,7 @@
             margin-top: 60px;
             transform: translateX(-250px);
             transition: transform 250ms ease-in-out;
-            background: linear-gradient(180deg, #004f34 0%, #a2e63c 100%);
+            background: linear-gradient(180deg, #004f34 0%, rgba(175,239,134) 100%);
         }
         .sidebarMenuInner{
             margin:0;
@@ -220,11 +220,20 @@
             transform: rotate(135deg);
             margin-top: 8px;
         }
+
         input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
             transition: all 0.3s;
             box-sizing: border-box;
             transform: rotate(-135deg);
             margin-top: -9px;
+        }
+
+        footer {
+            color: white;
+            background-color: #164b30;
+            padding: 25px;
+            width: 100%;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -243,7 +252,7 @@
         <ul class="sidebarMenuInner">
         <li>Jelena Jovanovic <span>Web Developer</span></li>
         <li><a href="https://vanila.io" target="_blank">Company</a></li>
-        <li><a href="https://instagram.com/plavookac" target="_blank">Instagram</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
         <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
         <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
@@ -258,12 +267,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-            </div>
+            <!-- </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="#about">About</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </nav>
 
@@ -326,8 +335,6 @@
                 </div>
             </div>
         </div><br>
-
-
 
         <div class="container-fluid bg-3 text-center" id="about">
             <h3>Sample</h3><br>
