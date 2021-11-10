@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 #!C:\Users\LENOVO\Desktop\BioDomain_Website - Copy\env\Scripts\python.exe
+=======
+#!c:\users\palak\onedrive\documents\github\biodomain_website\env\scripts\python.exe
+>>>>>>> Stashed changes
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

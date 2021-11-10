@@ -21,10 +21,14 @@ if not defined VIRTUAL_ENV_DISABLE_PROMPT (
     set "PROMPT=%ENV_PROMPT%%PROMPT%"
 )
 
+<<<<<<< Updated upstream
 REM Don't use () to avoid problems with them in %PATH%
 if defined _OLD_VIRTUAL_PYTHONHOME goto ENDIFVHOME
     set "_OLD_VIRTUAL_PYTHONHOME=%PYTHONHOME%"
 :ENDIFVHOME
+=======
+set VIRTUAL_ENV=C:\Users\palak\OneDrive\Documents\GitHub\BioDomain_Website\env
+>>>>>>> Stashed changes
 
 set PYTHONHOME=
 
