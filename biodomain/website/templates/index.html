@@ -21,23 +21,23 @@
             margin-bottom: 0;
             border-radius: 0;
         }
-        
+
         .navbar-inverse .navbar-nav>li>a {
             color: white;
         }
-        
+
         .navbar-inverse .navbar-nav>li>a:hover {
             background-color: #a2e63c;
             color: black;
         }
-        
+
         .jumbotron {
             padding-top: 150px;
             color: Black;
             background: url("static/images/greenbg.png");
             height: 70vh;
         }
-        
+
         .button {
             border-radius: 20px;
             background-color: #004f34;
@@ -54,14 +54,14 @@
             margin-top: 150px;
             margin-left: 600px;
         }
-        
+
         .button span {
             cursor: pointer;
             display: inline-block;
             position: relative;
             transition: 0.5s;
         }
-        
+
         .button span:after {
             content: '\00bb';
             position: absolute;
@@ -70,11 +70,11 @@
             right: -20px;
             transition: 0.5s;
         }
-        
+
         .button:hover span {
             padding-right: 25px;
         }
-        
+
         .button:hover span:after {
             opacity: 1;
             right: 0;
@@ -82,16 +82,20 @@
 
 
         @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-        html, body {
+
+        html,
+        body {
             overflow-x: hidden;
             height: 100%;
         }
+
         body {
             background: #fff;
             padding: 0;
             margin: 0;
             font-family: 'Varela Round', sans-serif;
         }
+
         .header {
             display: block;
             margin: 0 auto;
@@ -100,29 +104,33 @@
             box-shadow: none;
             background-color: #004f34;
             position: fixed;
-            height: 60px!important;
+            height: 60px !important;
             overflow: hidden;
             z-index: 10;
         }
+
         .main {
             margin: 0 auto;
             display: block;
             height: 100%;
             margin-top: 60px;
         }
-        .mainInner{
+
+        .mainInner {
             display: table;
             height: 100%;
             width: 100%;
             text-align: center;
         }
-        .mainInner div{
-            display:table-cell;
+
+        .mainInner div {
+            display: table-cell;
             vertical-align: middle;
             font-size: 3em;
             font-weight: bold;
             letter-spacing: 1.25px;
         }
+
         #sidebarMenu {
             height: 100%;
             position: fixed;
@@ -131,14 +139,16 @@
             margin-top: 60px;
             transform: translateX(-250px);
             transition: transform 250ms ease-in-out;
-            background: linear-gradient(180deg, #004f34 0%, rgba(175,239,134) 100%);
+            background: linear-gradient(180deg, #004f34 0%, rgba(175, 239, 134) 100%);
         }
-        .sidebarMenuInner{
-            margin:0;
-            padding:0;
+
+        .sidebarMenuInner {
+            margin: 0;
+            padding: 0;
             border-top: 1px solid rgba(255, 255, 255, 0.10);
         }
-        .sidebarMenuInner li{
+
+        .sidebarMenuInner li {
             list-style: none;
             color: #fff;
             text-transform: uppercase;
@@ -147,19 +157,22 @@
             cursor: pointer;
             border-bottom: 1px solid rgba(255, 255, 255, 0.10);
         }
-        .sidebarMenuInner li span{
+
+        .sidebarMenuInner li span {
             display: block;
             font-size: 14px;
             color: rgba(255, 255, 255, 0.50);
         }
-        .sidebarMenuInner li a{
+
+        .sidebarMenuInner li a {
             color: #fff;
             text-transform: uppercase;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
         }
-        input[type="checkbox"]:checked ~ #sidebarMenu {
+
+        input[type="checkbox"]:checked~#sidebarMenu {
             transform: translateX(0);
         }
 
@@ -168,6 +181,7 @@
             box-sizing: border-box;
             display: none;
         }
+
         .sidebarIconToggle {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -181,6 +195,7 @@
             height: 22px;
             width: 22px;
         }
+
         .spinner {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -189,6 +204,7 @@
             width: 100%;
             background-color: #fff;
         }
+
         .horizontal {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -196,12 +212,14 @@
             float: left;
             margin-top: 3px;
         }
+
         .diagonal.part-1 {
             position: relative;
             transition: all 0.3s;
             box-sizing: border-box;
             float: left;
         }
+
         .diagonal.part-2 {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -209,38 +227,38 @@
             float: left;
             margin-top: 3px;
         }
-        input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+
+        input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
             transition: all 0.3s;
             box-sizing: border-box;
             opacity: 0;
         }
-        input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+
+        input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
             transition: all 0.3s;
             box-sizing: border-box;
             transform: rotate(135deg);
             margin-top: 8px;
         }
 
-        input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            transform: rotate(-135deg);
-            margin-top: -9px;
-        }
+        input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+                transition: all 0.3s;
+                box-sizing: border-box;
+                transform: rotate(-135deg);
+                margin-top: -9px;
+            }
 
-        footer {
-            color: white;
-            background-color: #164b30;
-            padding: 25px;
-            width: 100%;
-            overflow: hidden;
-        }
+            footer {
+                color: white;
+                background-color: #164b30;
+                padding: 25px;
+                width: 100%;
+                overflow: hidden;
+            }
     </style>
 </head>
 
 <body>
-
-
     <div class="header"></div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -250,12 +268,12 @@
     </label>
     <div id="sidebarMenu">
         <ul class="sidebarMenuInner">
-        <li>Jelena Jovanovic <span>Web Developer</span></li>
-        <li><a href="https://vanila.io" target="_blank">Company</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
-        <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
-        <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
+                <li>Jelena Jovanovic <span>Web Developer</span></li>
+                <li><a href="https://vanila.io" target="_blank">Company</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
+                <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
         </ul>
     </div>
 
@@ -263,16 +281,21 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-            <!-- </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div> -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
+            </div>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
         </div>
     </nav>
 
@@ -284,104 +307,145 @@
         <a href="/instrumentlistpage"><button class="button"><span>List of Equipments<br></span></button></a>
     </div>
 
-    <div class="container-fluid bg-3 text-center" id="about">        
+    <style>
+        .collapsible {
+            background-color: #004f34;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 25px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #50a36d;
+        }
+
+        .content {
+            color: white;
+            padding: 18px;
+            width: 100%;
+            text-align: center;
+            display: none;
+            overflow: hidden;
+            background-color: #50a36d;
+        }
+    </style>
+
+    <button type="button" class="collapsible">About</button>
+    <div class="content">
+        <p color="white">This website contains the information about biology-biotechnical equipments and instruments
+            present in various institute.</p>
+    </div>
+
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <!-- <div class="container-fluid bg-3 text-center" id="about">
 
         <div class="row">
 
         </div><br>
         <div class="container-fluid bg-3 text-center">
-            <h3>About</h3> This website contains the information about biology-biotechnical equipments and instruments present in various institute. <br>Here are some categories of equipments one can find.</div>
+            <h3>About</h3> This website contains the information about biology-biotechnical equipments and instruments
+            present in various institute. <br>Here are some categories of equipments one can find.
+        </div> -->
 
-        <div class="container-fluid bg-3 text-center">
-            <h3>Sample</h3><br>
-            <div class="row">
-                <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
+    <div class="container-fluid bg-3 text-center">
+        <h3>Sample</h3><br>
+        <div class="row">
+            <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
             </div>
-        </div><br>
-
-        <div class="container-fluid bg-3 text-center" id="about">
-            <h3>Sample</h3><br>
-            <div class="row">
-                <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
+            <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
             </div>
-        </div><br>
-
-        <div class="container-fluid bg-3 text-center" id="about">
-            <h3>Sample</h3><br>
-            <div class="row">
-                <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
+            <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
             </div>
-        </div><br>
+            <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+        </div>
+    </div><br>
 
-        <footer class="container-fluid text-center" id="foot">
-            <p>Developed at IIT Jodhpur</p>
-            <p>Sample</p>
-            <p>Sample</p>
-        </footer>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    <div class="container-fluid bg-3 text-center" id="about">
+        <h3>Sample</h3><br>
+        <div class="row">
+            <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+        </div>
+    </div><br>
 
-        <script>
-            function w3_open() {
-                document.getElementById("main").style.marginLeft = "25%";
-                document.getElementById("openSidebarMenu").style.width = "25%";
-                document.getElementById("openSidebarMenu").style.display = "block";
-                document.getElementById("openNav").style.display = 'none';
-            }
-            
-            function w3_close() {
-                document.getElementById("main").style.marginLeft = "0%";
-                document.getElementById("openSidebarMenu").style.display = "none";
-                document.getElementById("openNav").style.display = "inline-block";
-            }
-        </script>   
+    <div class="container-fluid bg-3 text-center" id="about">
+        <h3>Sample</h3><br>
+        <div class="row">
+            <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+        </div>
+    </div><br>
+
+    <footer class="container-fluid text-center" id="foot">
+        <p>Developed at IIT Jodhpur</p>
+        <p>Sample</p>
+        <p>Sample</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
