@@ -1,13 +1,13 @@
 /* Add a gray background color and some padding to the footer */
 
-footer {
+/* footer {
     color: white;
     background-color: #164b30;
     padding: 25px;
     margin-bottom: 0;
     margin: 0;
     width: auto;
-}
+} */
 
 .button {
     border-radius: 4px;
