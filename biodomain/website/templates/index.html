@@ -51,8 +51,14 @@
             width: 300px;
             transition: all 0.5s;
             cursor: pointer;
-            margin-top: 150px;
-            margin-left: 600px;
+            /* margin-top: 150px;
+            margin-left: 600px; */
+            margin: 0;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
 
         .button span {
@@ -260,7 +266,7 @@
 
 <body>
     <div class="header">
-        <h1>Hi</h1>
+        <img src="{% static 'images/download.png' %}" alt='IITJ logo' id="right" width='75px' height='50px'> 
     </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -299,7 +305,7 @@
     <div class="jumbotron">
         <div class="container text-center">
             <h1>BioEquipZon</h1>
-            <p>get the equipments in your zone</p>
+            <p>access the equipments in your zone</p>
         </div>
         <a href="/instrumentlistpage"><button class="button"><span>List of Equipments<br></span></button></a>
     </div>
@@ -330,6 +336,12 @@
             display: none;
             overflow: hidden;
             background-color: #50a36d;
+        }
+
+        #right {
+            padding-top: 10px;
+            padding-right: 10px;
+            float: right;
         }
     </style>
 
@@ -365,7 +377,7 @@
         <div class="container-fluid bg-3 text-center">
             <h3>About</h3> This website contains the information about biology-biotechnical equipments and instruments
             present in various institute. <br>Here are some categories of equipments one can find.
-        </div> -->
+        </div> -->        
 
     <div class="container-fluid bg-3 text-center">
         <h3>Sample</h3><br>
@@ -387,7 +399,7 @@
                 <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
             </div>
         </div>
-    </div><br>
+    </div><br>    
 
     <div class="container-fluid bg-3 text-center" id="about">
         <h3>Sample</h3><br>

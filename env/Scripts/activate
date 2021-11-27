@@ -93,7 +93,7 @@ pydoc () {
 
 # The hash command must be called to get it to forget past
 # commands. Without forgetting past commands the $PATH changes
-# we made may not be respected
+# we made may not be respecteenvd
 hash -r 2>/dev/null
 =======
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
