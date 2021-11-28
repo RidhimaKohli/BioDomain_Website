@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -267,7 +268,7 @@
 
 <body>
     <div class="header">
-        <img src="{% static 'images\iitjKogo.png' %}" alt='IITJ logo' id="right" width='5%' height='80%'> 
+        <img src="{% static 'images\logo1.gif' %}" alt='IITJ logo' id="right"> 
     </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -340,10 +341,12 @@
         }
 
         #right {
-            padding-top: 10px;
-            padding-right: 10px;
+            margin: 0.5% 2% 0.5% 0.5%;
             float: right;
-        }        
+            width: 4%;
+            height: 75%;
+        }       
+
     </style>
 
     <button type="button" class="collapsible">About</button>
@@ -351,7 +354,6 @@
         <p color="white">This website contains the information about biology-biotechnical equipments and instruments
             present in various institute.</p>
     </div>
-
 
     <script>
         var coll = document.getElementsByClassName("collapsible");
@@ -370,7 +372,97 @@
         }
     </script>
 
-    <div class="container-fluid bg-3 text-center">
+    <div class="hover01 column">
+        <div>
+        <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+        <span>Hover</span>
+        </div>
+        <div>
+        <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
+        <span>Hover</span>
+        </div>
+        <div>
+        <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
+        <span>Hover</span>
+        </div>
+    </div>
+
+    <style>
+        .hover01 figure img {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+
+        .hover01 figure:hover img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+
+
+        .column {
+            margin: 15px 15px 0;
+            padding: 0;
+        }
+
+        .column:last-child {
+            padding-bottom: 60px;
+        }
+
+        .column::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        .column div {
+            position: relative;
+            float: left;
+            width: 300px;
+            height: 200px;
+            margin: 0 0 0 25px;
+            padding: 0;
+        }
+
+        .column div:first-child {
+            margin-left: 0;
+        }
+
+        .column div span {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            z-index: -1;
+            display: block;
+            width: 300px;
+            margin: 0;
+            padding: 0;
+            color: #444;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+            opacity: 0;
+        }
+
+        figure {
+            width: 300px;
+            height: 200px;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            overflow: hidden;
+        }
+        
+        figure:hover+span {
+            bottom: -36px;
+            opacity: 1;
+        }
+    </style>    
+    
+    <!-- <div class="container-fluid bg-3 text-center">
         <h3>Sample</h3><br>
         <div class="row">
             <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
@@ -434,7 +526,7 @@
                 <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
             </div>
         </div>
-    </div><br>
+    </div><br> -->
 
     <div>        
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -450,21 +542,13 @@
         </svg>
     </div>    
 
-    <!--Google map-->
-    <!-- <div class="map" style="background-color: #004f34; padding: 5% 5% 0 5%">
-        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
-            <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-            style="border:0" allowfullscreen></iframe>
-        </div>  
-    </div> -->
-
+   <!-- Google Map -->
     <div class="mapouter">
         <div class="gmap_canvas">
             <iframe width="100%" height="100%" background-color= "#004f34" id="gmap_canvas" src="https://maps.google.com/maps?q=Indian%20Institute%20of%20Technology,%20Jodhpur,%20342037&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
             <a href="https://123movies-org.net"></a>
         </div>
-    </div>
-    <!--Google Maps-->
+    </div>    
 
     <style>        
         .mapouter{  
@@ -483,6 +567,7 @@
         }
 
     </style>
+    <!-- Google Map -->
     
 
     <footer id="footer">
@@ -565,7 +650,7 @@
                                 <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
                                 <li class="menu__item"><a class="menu__link" href="#">About</a></li>
                                 <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-                                <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+                                <li class="menu__item"><a class="menu__link" href="biodomain\website\templates\team.html">Team</a></li>
                                 <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>    
                             </ul>
                     
@@ -833,6 +918,9 @@
         }
     </style>
 
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
