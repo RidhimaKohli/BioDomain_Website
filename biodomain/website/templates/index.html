@@ -10,17 +10,17 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+
 </head>
 
 <body>
     <div class="header">
-        <img src="{% static 'images\logo1.gif' %}" alt='IITJ logo' id="right"> 
+        <img src="{% static 'images\logo1.gif' %}" alt='IITJ logo' id="right">
     </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -30,12 +30,12 @@
     </label>
     <div id="sidebarMenu">
         <ul class="sidebarMenuInner">
-                <li>Jelena Jovanovic <span>Web Developer</span></li>
-                <li><a href="https://vanila.io" target="_blank">Company</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
-                <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
-                <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
+            <li>Jelena Jovanovic <span>Web Developer</span></li>
+            <li><a href="https://vanila.io" target="_blank">Company</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
+            <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
+            <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
         </ul>
     </div>
 
@@ -47,12 +47,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                 </button>
-            </div>            
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li><a href="#about">About</a></li>
-            </ul>
-        </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -66,26 +66,26 @@
 
     <section class="ftco-intro img area" id="main-head-section">
         <div class="container main-head">
-          <div class="row justify-content-center">
-            <div class="col-md-9 text-center">
-                <h1>BioEquipZone</h1>
-                <h3>access the equipments in your zone</h3>
-                <a href="/instrumentlistpage"><button class="button"><span>List of Equipments<br></span></button></a>
-    
-                <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <div class="row justify-content-center">
+                <div class="col-md-9 text-center">
+                    <h1>BioEquipZone</h1>
+                    <h3>access the equipments in your zone</h3>
+                    <a href="/instrumentlistpage"><button class="button"><span>List of Equipments<br></span></button></a>
+
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
         </div>
     </section>
@@ -99,23 +99,23 @@
             margin-bottom: 0;
             border-radius: 0;
         }
-
+        
         .navbar-inverse .navbar-nav>li>a {
             color: white;
         }
-
+        
         .navbar-inverse .navbar-nav>li>a:hover {
             background-color: #a2e63c;
             color: black;
         }
-
+        
         .jumbotron {
             padding-top: 150px;
             color: Black;
             background: url("static/images/greenbg.png");
             height: 70vh;
         }
-
+        
         .button {
             border-radius: 20px;
             background-color: #004f34;
@@ -138,14 +138,14 @@
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
         }
-
+        
         .button span {
             cursor: pointer;
             display: inline-block;
             position: relative;
             transition: 0.5s;
         }
-
+        
         .button span:after {
             content: '\00bb';
             position: absolute;
@@ -154,32 +154,30 @@
             right: -20px;
             transition: 0.5s;
         }
-
+        
         .button:hover span {
             padding-right: 25px;
         }
-
+        
         .button:hover span:after {
             opacity: 1;
             right: 0;
         }
-
-
+        
         @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-
         html,
         body {
             overflow-x: hidden;
             height: 100%;
         }
-
+        
         body {
             background: #fff;
             padding: 0;
             margin: 0;
             font-family: 'Varela Round', sans-serif;
         }
-
+        
         .header {
             display: block;
             margin: 0 auto;
@@ -192,21 +190,21 @@
             overflow: hidden;
             z-index: 10;
         }
-
+        
         .main {
             margin: 0 auto;
             display: block;
             height: 100%;
             margin-top: 60px;
         }
-
+        
         .mainInner {
             display: table;
             height: 100%;
             width: 100%;
             text-align: center;
         }
-
+        
         .mainInner div {
             display: table-cell;
             vertical-align: middle;
@@ -214,7 +212,7 @@
             font-weight: bold;
             letter-spacing: 1.25px;
         }
-
+        
         #sidebarMenu {
             height: 100%;
             position: fixed;
@@ -225,13 +223,13 @@
             transition: transform 250ms ease-in-out;
             background: linear-gradient(180deg, #004f34 0%, rgba(175, 239, 134) 100%);
         }
-
+        
         .sidebarMenuInner {
             margin: 0;
             padding: 0;
             border-top: 1px solid rgba(255, 255, 255, 0.10);
         }
-
+        
         .sidebarMenuInner li {
             list-style: none;
             color: #fff;
@@ -241,13 +239,13 @@
             cursor: pointer;
             border-bottom: 1px solid rgba(255, 255, 255, 0.10);
         }
-
+        
         .sidebarMenuInner li span {
             display: block;
             font-size: 14px;
             color: rgba(255, 255, 255, 0.50);
         }
-
+        
         .sidebarMenuInner li a {
             color: #fff;
             text-transform: uppercase;
@@ -255,17 +253,17 @@
             cursor: pointer;
             text-decoration: none;
         }
-
+        
         input[type="checkbox"]:checked~#sidebarMenu {
             transform: translateX(0);
         }
-
+        
         input[type=checkbox] {
             transition: all 0.3s;
             box-sizing: border-box;
             display: none;
         }
-
+        
         .sidebarIconToggle {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -279,7 +277,7 @@
             height: 22px;
             width: 22px;
         }
-
+        
         .spinner {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -288,7 +286,7 @@
             width: 100%;
             background-color: #fff;
         }
-
+        
         .horizontal {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -296,14 +294,14 @@
             float: left;
             margin-top: 3px;
         }
-
+        
         .diagonal.part-1 {
             position: relative;
             transition: all 0.3s;
             box-sizing: border-box;
             float: left;
         }
-
+        
         .diagonal.part-2 {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -311,98 +309,83 @@
             float: left;
             margin-top: 3px;
         }
-
+        
         input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
             transition: all 0.3s;
             box-sizing: border-box;
             opacity: 0;
         }
-
+        
         input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
             transition: all 0.3s;
             box-sizing: border-box;
             transform: rotate(135deg);
             margin-top: 8px;
         }
-
+        
         input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
-                transition: all 0.3s;
-                box-sizing: border-box;
-                transform: rotate(-135deg);
-                margin-top: -9px;
-            }
-
+            transition: all 0.3s;
+            box-sizing: border-box;
+            transform: rotate(-135deg);
+            margin-top: -9px;
+        }
     </style>
 
     <style>
-
-        /* .media-body{
+    /* .media-body{
         background: rgb(163, 163, 163);
         width: 100px; 
         height: 100px;
         border-radius: 50%;
         display: flex; /* or inline-flex */
         
-        align-items: center; 
+        align-items: center;
         justify-content: center;
         font-size: large;
-
-        }
-        .media-body:hover{
-            cursor: pointer;
-            background-color: #2d2e44;
-            color: white;
-        } */
-
-        body{
-            background-color: #2B7A78;
-            color: white;
-        }
-
-        .col-md{
-            align-content: center;
-            justify-content: center;
-
-        }
-
-        .ftco-intro{
-            padding: 50px;
-            height: 500px;
-            align-content: center;
-            background-color: #76D7C4;
-            line-height: 500px;
-        }
-
-        .contact-section{        
-            margin: 50px;
-        }
-        
-        .ftco-services-2{
-            padding: 0;
-        }
-
-        .main-head{
+    }
+    .media-body:hover {
+        cursor: pointer;
+        background-color: #2d2e44;
+        color: white;
+    }
+    */ body {
+        background-color: #2B7A78;
+        color: white;
+    }
+    .col-md {
+        align-content: center;
+        justify-content: center;
+    }
+    .ftco-intro {
+        padding: 50px;
+        height: 500px;
+        align-content: center;
+        background-color: #76D7C4;
+        line-height: 500px;
+    }
+    .contact-section {
+        margin: 50px;
+    }
+    .ftco-services-2 {
+        padding: 0;
+    }
+    .main-head {
         margin-top: 0;
-        }
-
-        .area{
-        background-image: linear-gradient(to right, #2C7873, #438496, #67AECA) ;  
-        
+    }
+    .area {
+        background-image: linear-gradient(to right, #2C7873, #438496, #67AECA);
         width: 100%;
-        height:100vh;        
-        }
-
-
-        .circles{
+        height: 100vh;
+    }
+    .circles {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         overflow: hidden;
-        }
-
-        .circles li{
+    }
+    .circles li {
         position: absolute;
         display: block;
         list-style: none;
@@ -410,101 +393,86 @@
         height: 20px;
         background: rgba(255, 255, 255, 0.2);
         animation: animate 25s linear infinite;
-        bottom: -150px;        
-        }
-
-        .circles li:nth-child(1){
+        bottom: -150px;
+    }
+    .circles li:nth-child(1) {
         left: 25%;
         width: 80px;
         height: 80px;
         animation-delay: 0s;
-        }
-
-
-        .circles li:nth-child(2){
+    }
+    .circles li:nth-child(2) {
         left: 10%;
         width: 20px;
         height: 20px;
         animation-delay: 2s;
         animation-duration: 12s;
-        }
-
-        .circles li:nth-child(3){
+    }
+    .circles li:nth-child(3) {
         left: 70%;
         width: 20px;
         height: 20px;
         animation-delay: 4s;
-        }
-
-        .circles li:nth-child(4){
+    }
+    .circles li:nth-child(4) {
         left: 40%;
         width: 60px;
         height: 60px;
         animation-delay: 0s;
         animation-duration: 18s;
-        }
-
-        .circles li:nth-child(5){
+    }
+    .circles li:nth-child(5) {
         left: 65%;
         width: 20px;
         height: 20px;
         animation-delay: 0s;
-        }
-
-        .circles li:nth-child(6){
+    }
+    .circles li:nth-child(6) {
         left: 75%;
         width: 110px;
         height: 110px;
         animation-delay: 3s;
-        }
-
-        .circles li:nth-child(7){
+    }
+    .circles li:nth-child(7) {
         left: 35%;
         width: 150px;
         height: 150px;
         animation-delay: 7s;
-        }
-
-        .circles li:nth-child(8){
+    }
+    .circles li:nth-child(8) {
         left: 50%;
         width: 25px;
         height: 25px;
         animation-delay: 15s;
         animation-duration: 45s;
-        }
-
-        .circles li:nth-child(9){
+    }
+    .circles li:nth-child(9) {
         left: 20%;
         width: 15px;
         height: 15px;
         animation-delay: 2s;
         animation-duration: 35s;
-        }
-
-        .circles li:nth-child(10){
+    }
+    .circles li:nth-child(10) {
         left: 85%;
         width: 150px;
         height: 150px;
         animation-delay: 0s;
         animation-duration: 11s;
-        }
-
-
-
-        @keyframes animate {
-
-        0%{
+    }
+    @keyframes animate {
+        0% {
             transform: translateY(0) rotate(0deg);
             opacity: 1;
             border-radius: 0;
         }
-
-        100%{
+        
+        100% {
             transform: translateY(-1000px) rotate(720deg);
             opacity: 0;
             border-radius: 50%;
         }
-        }
+    }
     </style>
 
 
@@ -520,12 +488,12 @@
             outline: none;
             font-size: 25px;
         }
-
+        
         .active,
         .collapsible:hover {
             background-color: #50a36d;
         }
-
+        
         .content {
             color: white;
             padding: 18px;
@@ -535,20 +503,18 @@
             overflow: hidden;
             background-color: #50a36d;
         }
-
+        
         #right {
             margin: 0.5% 2% 0.5% 0.5%;
             float: right;
             width: 4%;
             height: 75%;
-        }       
-
+        }
     </style>
 
     <button type="button" class="collapsible">About</button>
     <div class="content">
-        <p color="white">This website contains the information about biology-biotechnical equipments and instruments
-            present in various institute.</p>
+        <p color="white">This website contains the information about biology-biotechnical equipments and instruments present in various institute.</p>
     </div>
 
     <script>
@@ -556,7 +522,7 @@
         var i;
 
         for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function () {
+            coll[i].addEventListener("click", function() {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
                 if (content.style.display === "block") {
@@ -570,16 +536,16 @@
 
     <div class="hover01 column">
         <div>
-        <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
-        <span>Hover</span>
+            <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+            <span>Hover</span>
         </div>
         <div>
-        <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
-        <span>Hover</span>
+            <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
+            <span>Hover</span>
         </div>
         <div>
-        <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
-        <span>Hover</span>
+            <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
+            <span>Hover</span>
         </div>
     </div>
 
@@ -590,28 +556,27 @@
             -webkit-transition: .3s ease-in-out;
             transition: .3s ease-in-out;
         }
-
+        
         .hover01 figure:hover img {
             -webkit-transform: scale(1.3);
             transform: scale(1.3);
         }
-
-
+        
         .column {
-            margin: 5%;            
+            margin: 5%;
             padding: 5%;
         }
-
+        
         .column:last-child {
             padding: 5%;
         }
-
+        
         .column::after {
             content: '';
             clear: both;
             display: block;
         }
-
+        
         .column div {
             position: relative;
             float: left;
@@ -620,11 +585,11 @@
             margin: 0%;
             padding: 0;
         }
-
+        
         .column div:first-child {
             margin-left: 0;
         }
-
+        
         .column div span {
             position: absolute;
             bottom: -20px;
@@ -642,7 +607,7 @@
             transition: .3s ease-in-out;
             opacity: 0;
         }
-
+        
         figure {
             width: 300px;
             height: 200px;
@@ -659,10 +624,9 @@
             height: 200px;
             margin: 2%;
             padding: 5%;
-
         }
-    </style>    
-    
+    </style>
+
     <!-- <div class="container-fluid bg-3 text-center">
         <h3>Sample</h3><br>
         <div class="row">
@@ -729,7 +693,7 @@
         </div>
     </div><br> -->
 
-    <div>        
+    <div>
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
@@ -741,35 +705,34 @@
                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#004f34" />
             </g>
         </svg>
-    </div>    
+    </div>
 
-   <!-- Google Map -->
+    <!-- Google Map -->
     <div class="mapouter">
         <div class="gmap_canvas">
-            <iframe width="100%" height="100%" background-color= "#004f34" id="gmap_canvas" src="https://maps.google.com/maps?q=Indian%20Institute%20of%20Technology,%20Jodhpur,%20342037&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" background-color="#004f34" id="gmap_canvas" src="https://maps.google.com/maps?q=Indian%20Institute%20of%20Technology,%20Jodhpur,%20342037&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
             <a href="https://123movies-org.net"></a>
         </div>
-    </div>    
+    </div>
 
-    <style>        
-        .mapouter{  
-            background-color: #004f34;         
+    <style>
+        .mapouter {
+            background-color: #004f34;
             position: relative;
             text-align: right;
             height: 70%;
             width: 100%;
         }
-
+        
         .gmap_canvas {
-            overflow: hidden;            
+            overflow: hidden;
             height: 100%;
             width: 100%;
             padding: 5% 10% 0% 10%;
         }
-
     </style>
     <!-- Google Map -->
-    
+
 
     <footer id="footer">
         <div class="footer">
@@ -779,27 +742,25 @@
                         <!-- Text Widget start -->
                         <div class="widget">
                             <div class="text-widget">
-                            <h2 class="heading">Address</h2>
+                                <h2 class="heading">Address</h2>
                                 <div class="textsec">
-                                    <li style="font-size: 3rem"><i class="fa fa-map-marker" style="font-size: 3rem"></i> Indian Institute of Technology, Jodhpur</li>                                                                     
+                                    <li style="font-size: 3rem"><i class="fa fa-map-marker" style="font-size: 3rem"></i> Indian Institute of Technology, Jodhpur</li>
                                     <p>
-                                       N.H. 65, Nagaur Road,<br>
-                                       Karwar 342037,<br>
-                                       Jodhpur, Rajasthan
-                                    </p>                                   
+                                        N.H. 65, Nagaur Road,<br> Karwar 342037,<br> Jodhpur, Rajasthan
+                                    </p>
 
                                     <ul class="contactdetail">
                                         <li><i class="fa fa-mobile" style="padding: 1.5%; font-size: 2rem"></i> Tel: +91 (0) 291 280 1211</li>
                                         <li><i class="fa fa-envelope" style="padding: 1.5%"></i><a href="mailto:bioequipzon@gmail.com"> bioequipzon@gmail.com</a></li>
                                         <li><i class="fa fa-star" style="padding: 1.5%"></i><a href="#">Give feedback</a></li>
-                                    </ul>                            
+                                    </ul>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="clearfix"></div>
                         <!-- Text Widget start -->
-                    </div>                    
+                    </div>
 
 
                     <div class="col-lg-6 col-md-12 col-sm-12 .col-xs-12">
@@ -846,32 +807,33 @@
                                     <ion-icon name="logo-instagram"></ion-icon>
                                     </a></li>
                             </ul> -->
-                    
+
                             <ul class="menu">
                                 <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
                                 <li class="menu__item"><a class="menu__link" href="#">About</a></li>
                                 <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
                                 <li class="menu__item"><a class="menu__link" href="biodomain\website\templates\team.html">Team</a></li>
-                                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>    
+                                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
                             </ul>
-                    
+
                             <p style="text-align: center; font-size: 1.5rem; margin: 1rem">Designed & Maintained by IIT Jodhpur</p>
                             <p style="text-align: center; font-size: 1.5rem; margin: 1rem">&copy; IITJ, 2021 | All Rights Reserved</p>
-                        </div>                    
+                        </div>
                         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>                                       
-                    
+                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
                         <div class="clearfix"></div>
-		                    <!-- Flickr Widget End -->
+                        <!-- Flickr Widget End -->
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </footer>
 
-    
-    <style>        
+
+    <style>
         /*Waves*/
+        
         .waves {
             position: relative;
             width: 100%;
@@ -881,27 +843,32 @@
             min-height: 100px;
             max-height: 400px;
         }
-
         /* Animation */
+        
         .parallax>use {
             animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
         }
+        
         .parallax>use:nth-child(1) {
             animation-delay: -2s;
             animation-duration: 7s;
         }
+        
         .parallax>use:nth-child(2) {
             animation-delay: -3s;
             animation-duration: 10s;
         }
+        
         .parallax>use:nth-child(3) {
             animation-delay: -4s;
             animation-duration: 13s;
         }
+        
         .parallax>use:nth-child(4) {
             animation-delay: -5s;
             animation-duration: 20s;
         }
+        
         @keyframes move-forever {
             0% {
                 transform: translate3d(-90px, 0, 0);
@@ -910,8 +877,8 @@
                 transform: translate3d(85px, 0, 0);
             }
         }
-
         /*Shrinking for mobile*/
+        
         @media (max-width: 768px) {
             .waves {
                 height: 40px;
@@ -921,22 +888,20 @@
                 height: 30vh;
             }
         }
-
+        
         .icons {
             margin-top: 5%;
             margin-bottom: 5%;
         }
-
+        
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
         }
-
-
+        
         .footer {
             position: relative;
             width: 100%;
@@ -947,13 +912,13 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            color:#bdc3c7;
+            color: #bdc3c7;
         }
-
+        
         .contactdetail {
             font-size: 1.75rem;
         }
-
+        
         .social-icon,
         .menu {
             position: relative;
@@ -963,12 +928,12 @@
             margin: 10px 0;
             flex-wrap: wrap;
         }
-
+        
         .social-icon__item,
         .menu__item {
             list-style: none;
         }
-
+        
         .social-icon__link {
             font-size: 2rem;
             color: #fff;
@@ -976,10 +941,11 @@
             display: inline-block;
             transition: 0.5s;
         }
+        
         .social-icon__link:hover {
             transform: translateY(-10px);
         }
-
+        
         .menu__link {
             font-size: 1.2rem;
             color: #fff;
@@ -990,11 +956,11 @@
             opacity: 0.75;
             font-weight: 300;
         }
-
+        
         .menu__link:hover {
             opacity: 1;
         }
-
+        
         .footer p {
             color: #fff;
             margin: 15px 0 10px 0;
@@ -1005,121 +971,137 @@
 
     <style>
         /*General */
-        li{
-        list-style :none;
+        
+        li {
+            list-style: none;
         }
-        h5.order a{
-        text-align:center;
+        
+        h5.order a {
+            text-align: center;
         }
         /* Widget Contact Form
         ================================================== */
+        
         .contact-forms .btn {
-        border-radius: 0;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 10px;
+            border-radius: 0;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
         }
+        
         .btn-primary {
-        color: #fff !important;
-        position: relative;
-        font-weight: bold;
-        text-transform: uppercase;
-        border: none !important;
-        -webkit-box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset;
-        box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset;
+            color: #fff !important;
+            position: relative;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none !important;
+            -webkit-box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset;
         }
-
-        h5.order a{
-            color:white;
+        
+        h5.order a {
+            color: white;
         }
-
+        
         .contact-forms .btn {
-        border-radius: 0;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-        background: rgba(0,79,52));
-        padding: 17px;
-        border-radius: 4px;
-        color: white !important;
+            border-radius: 0;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            background: rgba(0, 79, 52));
+            padding: 17px;
+            border-radius: 4px;
+            color: white !important;
         }
-        .contact-forms .btn span{
+        
+        .contact-forms .btn span {
             float: left;
         }
-        .contact-forms .btn i{
+        
+        .contact-forms .btn i {
             float: right;
             font-weight: bold;
             font-size: 18px;
         }
-        footer input[type="text"], 
+        
+        footer input[type="text"],
         footer textarea,
-        .blacksidebar .contact-forms input[type="text"], 
+        .blacksidebar .contact-forms input[type="text"],
         .blacksidebar .contact-forms textarea {
-        width: 100%;
-        margin-bottom: 13px;
-        padding: 8px 10px;
-        border-radius: 0;
+            width: 100%;
+            margin-bottom: 13px;
+            padding: 8px 10px;
+            border-radius: 0;
         }
-        footer.style1 input[type="text"], 
+        
+        footer.style1 input[type="text"],
         footer.style1 textarea,
-        .blacksidebar .contact-forms input[type="text"], 
+        .blacksidebar .contact-forms input[type="text"],
         .blacksidebar .contact-forms textarea {
-            color:#bdc3c7;
+            color: #bdc3c7;
             background: #1d1e20;
             border: #4b4c4e solid 1px;
         }
+        
         footer textarea {
             height: 117px;
         }
-        header .contact-forms input[type="text"], 
+        
+        header .contact-forms input[type="text"],
         header .contact-forms textarea {
             width: 100%;
             margin-bottom: 20px;
-            color:#000408;
+            color: #000408;
             padding: 8px 10px;
             background: #fff;
             border: #c4c4c4 solid 1px;
         }
-        header .contact-forms input[type="submit"], 
+        
+        header .contact-forms input[type="submit"],
         header .contact-forms button {
             width: auto !important;
         }
-        header .contact-forms input[type="submit"] i, 
-        header .contact-forms button i{
+        
+        header .contact-forms input[type="submit"] i,
+        header .contact-forms button i {
             margin-left: 10px;
         }
+        
         footer textarea {
             height: 117px;
         }
-
         /* Footer
         ================================================== */
         
         footer hr {
             border-top: rgba(255, 255, 255, 0.2) solid 1px;
         }
+        
         .footerwidgets {
             /* padding: 40px 0; */
         }
+        
         footer.style1 .widget {
             color: #bdc3c7;
             border-top: none;
         }
+        
         footer .widget:before {
             background: none;
         }
-        footer.style1 .widget a{
+        
+        footer.style1 .widget a {
             color: #bdc3c7;
         }
-       
+        
         .widget-contact {
-        padding: 6px 45px 10px 45px;
-        background: rgba(226, 220, 224, 0.15);
-        border-radius: 2px;
+            padding: 6px 45px 10px 45px;
+            background: rgba(226, 220, 224, 0.15);
+            border-radius: 2px;
         }
     </style>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
