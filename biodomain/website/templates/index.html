@@ -393,59 +393,113 @@
             <figure><img src="{% static 'images\Basic.png' %}" alt='Basic'></figure> 
             <div class="text">
                 <h2>Basic</h2>
-            </div>           
+            </div>            
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>Basic</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>        
         </div>
         <div class="col-xs-6 col-md-4">
             <figure><img src="{% static 'images\Electrophoresis.png' %}" alt='Electrophoresis' style="height: 120%"></figure> 
             <div class="text">
                 <h2>Electrophoresis</h2>
-            </div>           
+            </div>  
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>Electrophoresis</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>         
         </div>
         <div class="col-xs-6 col-md-4">
             <figure><img src="{% static 'images\Bioimaging.png' %}" alt='Bioimaging'></figure>   
             <div class="text">
                 <h2>Bioimaging</h2>
-            </div>          
+            </div> 
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>Bioimaging</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>         
         </div>
-        </div>
+    </div>
     <div class="hover01 row">
         <div class="col-xs-6 col-md-4">
             <figure><img src="{% static 'images\Spectroscopy.png' %}" alt='Spectroscopy'></figure>
             <div class="text">
                 <h2>Spectroscopy</h2>
-            </div>             
+            </div>   
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>Spectroscopy</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>          
         </div>
         <div class="col-xs-6 col-md-4">
             <figure><img src="{% static 'images\Chromatography.png' %}" alt='Chromatography'></figure> 
             <div class="text">
                 <h2>Chromatography</h2>
-            </div>           
+            </div>
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>Chromatography</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>             
         </div>
         <div class="col-xs-6 col-md-4">
             <figure><img src="{% static 'images\CellCulture.png' %}" alt='Cell Culture'></figure>
             <div class="text">
                 <h2>Cell Culture</h2>
-            </div>      
+            </div> 
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>Cell Culture</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>       
         </div>
-        </div>
+    </div>
     <div class="hover01 row">
         <div class="col-xs-6 col-md-4">
             <figure><img src="{% static 'images\Incubators.png' %}" alt='Incubators' style="height: 110%"></figure>
             <div class="text">
                 <h2>Incubators</h2>
-            </div>      
+            </div>
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>Incubators</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>        
         </div>
         <div class="col-xs-6 col-md-4">
             <figure><img src="{% static 'images\X-rayCrystallography.png' %}" alt='X-ray Crystallography'></figure>
             <div class="text">
                 <h2>X-ray Crystallography</h2>
-            </div>      
+            </div> 
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>X-ray Crystallography</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>       
         </div>
         <div class="col-xs-6 col-md-4">
             <figure><img src="{% static 'images\Centrifuge.png' %}" alt='Centrifuge'></figure>
             <div class="text">
                 <h2>Centrifuge</h2>
             </div>      
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2>Centrifuge</h2>
+                    <h5>Basic equipment present in all the labs</h5>
+                </div>
+            </div>  
         </div> 
     </div>
 
@@ -465,10 +519,10 @@
             transition: .3s ease-in-out;
         }
         
-        .hover01 figure:hover img {
+        /* .hover01 figure:hover img {
             -webkit-transform: scale(1.3);
             transform: scale(1.3);
-        }
+        } */
         
         .row {
             /* content: '';
@@ -478,14 +532,14 @@
             margin: 5%;
         }
 
-        * {
+        /* * {
         box-sizing: border-box;
-        }
+        } */
 
         .text {
             display:inline-block;
             position:absolute;
-            bottom: 0;
+            bottom: 0%;
             right: 5%;
             left: 5%;
             background: #000;
@@ -498,7 +552,56 @@
                
         h2{
             font-size: 4rem;
-            font-weight: bold;
+            font-weight: 600;
+        } 
+        
+        h5{
+            font-size: 1.5rem;
+            font-weight: lighter;
+        }
+
+        .overlay {
+            position: absolute;     
+            opacity:0;
+            bottom:0;
+            right:0;
+            top:100%;
+            height:0;
+            width:100%;
+            overflow: hidden;
+            transition: .5s ease;
+            background: #000;
+            background: rgba(0,0,0,0.6);
+	    }
+
+        .hover01:hover .text{
+            opacity: 0;
+        }
+
+        .hover01:hover .h2{
+            opacity: 0;
+        }
+        
+
+        .col-xs-6:hover .overlay {
+            top: 0;
+            height: 100%;
+            opacity:0.5;            
+        }
+
+        .hover01:hover .overlay{
+        opacity: 1;       
+        }
+
+        .overlay-text {
+        color: white;
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        /* -webkit-transform: translate(-50%, -50%); */
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: left;
         }
 
         /* .column div {
@@ -737,7 +840,7 @@
                             </ul>
 
                             <p style="text-align: center; font-size: 1.5rem; margin: 1rem">Designed & Maintained by IIT Jodhpur</p>
-                            <p style="text-align: center; font-size: 1.5rem; margin: 1rem">&copy; IITJ, 2021 | All Rights Reserved</p>
+                            <p style="text-align: center; font-size: 1.5rem; margin: 0rem">&copy; IITJ, 2021 | All Rights Reserved</p>
                         </div>
                         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
                         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -811,9 +914,9 @@
         
         .icons {
             margin-top: 5%;
-            margin-bottom: 5%;
+            margin-bottom: 0%;
         }
-        
+
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
         * {
             margin: 0;
