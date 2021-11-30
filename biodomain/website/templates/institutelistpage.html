@@ -14,6 +14,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
+<script>
+    $(document).ready(function() {
+
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
 <style>
     td,
     tr {
@@ -26,7 +37,8 @@
     <center>
         <h1>List of Institutes</h1>
     </center>
-
+    <h4>Filter</h4>
+    <input type="text" id="myInput" placeholder="Enter search ..." class="form-control"><br>
     <form method="POST">
         {%csrf_token%}
         <select name="category">
@@ -50,7 +62,7 @@
                     <th>Website</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="myTable">
                 {% for e in institute %}
                 <tr>
                     <td class="cell ">{{e.Institute}}</td>
