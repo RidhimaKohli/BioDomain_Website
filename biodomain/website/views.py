@@ -8,7 +8,8 @@ from website.models import Category_Description
 def home(request):
     return render(request,'index.html', {})
 
-
+def team(request):
+    return render(request,'team.html', {})
 
 def InstrumentListpage(request):
     allInst = Instruments.objects.all()

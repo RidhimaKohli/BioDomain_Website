@@ -14,11 +14,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
+
+<script>
+    $(document).ready(function() {
+
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
 <style>
     td,
     tr {
         text-align: center;
         vertical-align: middle;
+    }
+    
+    .form-control {
+        border-radius: 5px;
+        width: 40vw;
     }
 </style>
 
@@ -27,50 +45,44 @@
         <h1>List of Equipments</h1>
     </center>
 
-    <form method="POST">
-        {%csrf_token%}
-        <select name="category">
-			<option selected disabled=true>---select category---</option>
-			<option>c1</option>
-			<option>c2</option>
-			<option>c3</option>
-		</select>
-        <input type="submit" value="search">
-        <hr>
-        <table class=" table table-hover table-striped table-bordered ">
-            <thead class="thead-dark ">
-                <tr>
-                    <th>Instrument_ID</th>
-                    <th>Name</th>
-                    <th>Model</th>
-                    <th>Manufacturer</th>
-                    <th>Category</th>
-                    <th>Availability</th>
-                    <th>Institute</th>
-                    <th>Instrument Description</th>
-                    <th>Origin</th>
 
-                </tr>
-            </thead>
-            <tbody>
-                {% for e in instruments %}
-                <tr>
-                    <td class="cell ">{{e.Instrument_ID}}</td>
-                    <td class="cell ">{{e.Name}}</td>
-                    <td class="cell ">{{e.Model}}</td>
-                    <td class="cell ">{{e.Manufacturer}}</td>
-                    <td class="cell ">{{e.Category}}</td>
-                    <td class="cell ">{{e.Availability}}</td>
-                    <td class="cell ">{{e.Institute}}</td>
-                    <td class="cell ">{{e.Instrument_Description}}</td>
-                    <td class="cell ">{{e.Origin}}</td>
+    <h4>Filter</h4>
+    <input type="text" id="myInput" placeholder="Enter search ..." class="form-control"><br>
+    <hr>
+    <table class=" table table-hover table-striped table-bordered ">
+        <thead class="thead-dark ">
+            <tr>
+                <th>Instrument_ID</th>
+                <th>Name</th>
+                <th>Model</th>
+                <th>Manufacturer</th>
+                <th>Category</th>
+                <th>Availability</th>
+                <th>Institute</th>
+                <th>Instrument Description</th>
+                <th>Origin</th>
+
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            {% for e in instruments %}
+            <tr>
+                <td class="cell ">{{e.Instrument_ID}}</td>
+                <td class="cell ">{{e.Name}}</td>
+                <td class="cell ">{{e.Model}}</td>
+                <td class="cell ">{{e.Manufacturer}}</td>
+                <td class="cell ">{{e.Category}}</td>
+                <td class="cell ">{{e.Availability}}</td>
+                <td class="cell ">{{e.Institute}}</td>
+                <td class="cell ">{{e.Instrument_Description}}</td>
+                <td class="cell ">{{e.Origin}}</td>
 
 
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 
 </body>
 
