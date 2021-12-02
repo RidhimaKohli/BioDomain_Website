@@ -1,0 +1,355 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+    
+    <div class="row">
+        <div class="content">                     
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Spectroscopy.png' %}" alt='Spectroscopy'>
+            <div class="content-details fadeIn-bottom">
+                <h3 class="content-title">This is a title</h3>
+                <p class="content-text">This is a short description</p>
+            </div>            
+        </div>   
+
+        <div class="content">        
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\X-rayCrystallography.png' %}" alt='X-ray Crystallography'>
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">This is a title</h3>
+              <p class="content-text">This is a short description</p>
+            </div>          
+        </div>        
+    </div>
+
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+        *, *:before, *:after{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing:border-box;
+        box-sizing: border-box;
+        }
+
+
+        .row {
+                    content: '';
+                    clear: both;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 5%;
+                }
+
+        body{
+        background: #f9f9f9;
+        font-size: 16px;
+        font-family: 'Raleway', sans-serif;
+        }
+
+        .main-title{
+        color: #2d2d2d;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 0.7em 0;
+        }
+
+        .container{
+        padding: 1em 0;
+        float: left;
+        width: 50%;
+        }
+        @media screen and (max-width: 640px){
+        .container{
+            display: block;
+            width: 100%;
+        }
+        }
+
+        @media screen and (min-width: 900px){
+        .container{
+            width: 33.33333%;
+        }
+        }
+
+        .container .title{
+        color: #1a1a1a;
+        text-align: center;
+        margin-bottom: 10px;
+        }
+
+        .content {
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+        overflow: hidden;
+        }
+
+        .content .content-overlay {
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        height: 99%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+        }
+
+        .content:hover .content-overlay{
+        opacity: 1;
+        }
+
+        .content-image{
+        width: 100%;
+        }
+
+        .content-details {
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+        }
+
+        .content:hover .content-details{
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        }
+
+        .content-details h3{
+        color: #fff;
+        font-weight: 500;
+        font-size: 2rem;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+        }
+
+        .content-details p{
+        color: #fff;
+        font-size: 1rem;
+        }
+
+        .fadeIn-bottom{
+        top: 80%;
+        }
+
+
+    </style>   
+
+
+
+<div class="col-xs-6 col-md-4">            
+
+    <div class="slider">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+        <a href="#slide-4"></a>
+        <a href="#slide-5"></a>
+        <a href="#slide-6"></a>
+
+        <div class="slides">
+            <div id="slide-1">
+                <figure><img src="https://static4.depositphotos.com/1005563/379/i/600/depositphotos_3798254-stock-photo-eco-laboratory.jpg" alt='Incubators' style="height: 100%"></figure>
+                <div class="text">
+                    <h2>Slide to explore some more categories</h2>
+                    
+                </div>         
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2>Other Ctegories</h2>
+                        <h5>Basic equipment present in all the labs</h5>
+                    </div>
+                </div>               
+            </div>                    
+            <div id="slide-2">
+                <figure><img src="{% static 'images\Sequencing.png' %}" alt='Incubators' style="height: 100%"></figure>
+                <div class="text">
+                    <h2>Sequencing</h2>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2>Sequencing</h2>
+                        <h5>Basic equipment present in all the labs</h5>
+                    </div>
+                </div> 
+            </div>
+            <div id="slide-3">
+                <figure><img src="{% static 'images\PCR.png' %}" alt='Incubators' style="height: 100%"></figure>
+                <div class="text">
+                    <h2>PCR</h2>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2>PCR</h2>
+                        <h5>Basic equipment present in all the labs</h5>
+                    </div>
+                </div> 
+            </div>
+            <div id="slide-4">
+                <figure><img src="{% static 'images\Refrigerators.png' %}" alt='Incubators' style="height: 100%"></figure>
+                <div class="text">
+                    <h2>Refrigerators</h2>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2>Refrigerators</h2>
+                        <h5>Basic equipment present in all the labs</h5>
+                    </div>
+                </div> 
+            </div>
+            <div id="slide-5">
+                <figure><img src="{% static 'images\Bioreactors.png' %}" alt='Incubators' style="height: 100%"></figure>
+                <div class="text">
+                    <h2>Bioreactors</h2>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2>Bioreactors</h2>
+                        <h5>Basic equipment present in all the labs</h5>
+                    </div>
+                </div> 
+            </div>
+            <div id="slide-6">
+                <figure><img src="{% static 'images\Incubators.png' %}" alt='Incubators' style="height: 100%"></figure>
+                <div class="text">
+                    <h2>Incubators</h2>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2>Incubators</h2>
+                        <h5>Basic equipment present in all the labs</h5>
+                    </div>
+                </div> 
+            </div>
+            <div id="slide-7">
+                <figure><img src="{% static 'images\Miscellaneous.png' %}" alt='Incubators' style="height: 100%"></figure>
+                <div class="text">
+                    <h2>Miscellaneous</h2>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2>Miscellaneous</h2>
+                        <h5>Basic equipment present in all the labs</h5>
+                    </div>
+                </div> 
+            </div>            
+            
+        </div>
+        
+    </div>                       
+</div>        
+</div>  
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+    .slider {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
+    .slides {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+    .slides::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        margin-top: -10px;
+    }
+    /* .slides::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 10px;
+    }
+    .slides::-webkit-scrollbar-track {
+        background: transparent;
+    } */
+    .slides > div {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        width: 100%;
+        height: 80%;
+        margin-right: 50px;
+        border-radius: 10px;
+        background: #eee;
+        transform-origin: center center;
+        transform: scale(1);
+        transition: transform 0.5s;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+    }
+    .slider > a {
+        display: inline-flex;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: white;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        /* margin: 0 0 0.5rem 0; */
+        position: relative;
+    }
+    .slider > a:active {
+        top: 1px;
+        color: #1c87c9;
+    }
+    .slider > a:focus {
+        background: #eee;
+    }
+    /* Don't need button navigation */
+    @supports (scroll-snap-type) {
+        .slider > a {
+        display: none;
+        }
+    }      
+</style>
+
+
+</body>
+
+</html>

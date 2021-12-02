@@ -11,6 +11,33 @@ def home(request):
 def team(request):
     return render(request,'team.html', {})
 
+def trial(request):
+    return render(request,'trial.html', {})    
+
+def BasicEquipments(request):
+    return render(request,'BasicEquipments.html', {})  
+
+def BioimagingEquipments(request):
+    return render(request,'BioimagingEquipments.html', {})          
+
+def CentrifugeEquipments(request):
+    return render(request,'CentrifugeEquipments.html', {})  
+
+def CellCultureEquipments(request):
+    return render(request,'CellCultureEquipments.html', {})  
+
+def ElectrophoresisEquipments(request):
+    return render(request,'ElectrophoresisEquipments.html', {})  
+
+def ChromatographyEquipments(request):
+    return render(request,'ChromatographyEquipments.html', {})  
+
+def SpectroscopyEquipments(request):
+    return render(request,'SpectroscopyEquipments.html', {})  
+
+def XrayCrystallographyEquipments(request):
+    return render(request,'XrayCrystallographyEquipments.html', {})  
+
 def InstrumentListpage(request):
     allInst = Instruments.objects.all()
     context={'instruments':allInst}

@@ -30,12 +30,12 @@
     </label>
     <div id="sidebarMenu">
         <ul class="sidebarMenuInner">
-            <li>Jelena Jovanovic <span>Web Developer</span></li>
-            <li><a href="https://vanila.io" target="_blank">Company</a></li>
+            <li><a href="#" target="_blank">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="team" target="_blank">Meet Our Team</a></li>
             <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
             <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
-            <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
+            
         </ul>
     </div>
 
@@ -141,6 +141,11 @@
             height: 10% !important;
             overflow: hidden;
             z-index: 10;
+        }
+
+        .header img{
+            height: 80%;
+            padding: 0.75% 1.5% 0 0;
         }
         
         .main {
@@ -327,7 +332,7 @@
         }
     </style>
 
-    <div class=about_section>
+    <!-- <div class=about_section>
         <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
           <svg xmlns="http://www.w3.org/2000/svg">
             <symbol viewBox="0 0 24 24" id="expand-more">
@@ -347,7 +352,7 @@
           </summary>
           <p>This website contains information about biology and bioengineering related equipments and instruments present in various institute.</p>
         </details>
-    </div>
+    </div> -->
 
     <style>
 
@@ -379,6 +384,8 @@
           
           .about_section details p {
             color: white;
+            padding-top: 5%;
+            font-size: 2rem;
             font-weight: 300;
           }
           
@@ -429,8 +436,7 @@
             display: none;
           }
           
-    </style>
-    
+    </style>   
 
     
 
@@ -457,445 +463,202 @@
         <h3>Categories</h3>
     </div> -->
 
-    <div class="hover01 row">
-        <div class="col-xs-6 col-md-4">
-            <figure><img src="{% static 'images\Basic.png' %}" alt='Basic'></figure> 
-            <div class="text">
-                <h2>Basic</h2>
+
+
+    <div class="row">
+        <div class="content">  
+            <div class="content-overlay"></div>            
+            <img class="content-image" src="{% static 'images\Basic.png' %}" alt='Basic'>    
+            <h3 class="name-text">Basic</h3>                                    
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li><a href="BasicEquipments"><h4>View more</h4></a></li>
             </div>            
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>Basic</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
-            </div>        
-        </div>
-        <div class="col-xs-6 col-md-4">
-            <figure><img src="{% static 'images\Electrophoresis.png' %}" alt='Electrophoresis' style="height: 120%"></figure> 
-            <div class="text">
-                <h2>Electrophoresis</h2>
-            </div>  
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>Electrophoresis</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
-            </div>         
-        </div>
-        <div class="col-xs-6 col-md-4">
-            <figure><img src="{% static 'images\Bioimaging.png' %}" alt='Bioimaging'></figure>   
-            <div class="text">
-                <h2>Bioimaging</h2>
-            </div> 
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>Bioimaging</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
-            </div>         
-        </div>
-    </div>
-    <div class="hover01 row">
-        <div class="col-xs-6 col-md-4">
-            <figure><img src="{% static 'images\Spectroscopy.png' %}" alt='Spectroscopy'></figure>
-            <div class="text">
-                <h2>Spectroscopy</h2>
-            </div>   
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>Spectroscopy</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
+        </div>   
+
+        <div class="content">         
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Bioimaging.png' %}" alt='Bioimaging'>
+            <h3 class="name-text">Bioimaging</h3> 
+            <div class="content-details fadeIn-bottom">
+              <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+              <li><a href="BioimagingEquipments"><h4>View more</h4></a></li>
             </div>          
         </div>
-        <div class="col-xs-6 col-md-4">
-            <figure><img src="{% static 'images\Chromatography.png' %}" alt='Chromatography'></figure> 
-            <div class="text">
-                <h2>Chromatography</h2>
+
+        <div class="content"> 
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Centrifuge.png' %}" alt='Centrifuge'>
+            <h3 class="name-text">Centrifuge</h3> 
+            <div class="content-details fadeIn-bottom">
+              <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+              <li><a href="CentrifugeEquipments"><h4>View more</h4></a></li>
             </div>
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>Chromatography</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
-            </div>             
-        </div>
-        <div class="col-xs-6 col-md-4">
-            <figure><img src="{% static 'images\CellCulture.png' %}" alt='Cell Culture'></figure>
-            <div class="text">
-                <h2>Cell Culture</h2>
-            </div> 
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>Cell Culture</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
-            </div>       
         </div>
     </div>
-    <div class="hover01 row">        
-        <div class="col-xs-6 col-md-4">
-            <figure><img src="{% static 'images\Centrifuge.png' %}" alt='Centrifuge'></figure>
-            <div class="text">
-                <h2>Centrifuge</h2>
-            </div>      
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>Centrifuge</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
-            </div>  
-        </div> 
-        <div class="col-xs-6 col-md-4">            
-            <figure><img src="{% static 'images\X-rayCrystallography.png' %}" alt='X-ray Crystallography'></figure>
-            <div class="text">
-                <h2>X-ray Crystallography</h2>
-            </div> 
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>X-ray Crystallography</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
-            </div>       
+
+    <div class="row">
+        <div class="content">                     
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\CellCulture.png' %}" alt='Cell Culture'>
+            <h3 class="name-text">Cell Culture</h3> 
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li><a href="CellCultureEquipments"><h4>View more</h4></a></li>
+            </div>            
+        </div>   
+
+        <div class="content">        
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Electrophoresis.png' %}" alt='Electrophoresis' style="height: 110%;">
+            <h3 class="name-text">Electrophoresis</h3> 
+            <div class="content-details fadeIn-bottom">
+              <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+              <li><a href="ElectrophoresisEquipments"><h4>View more</h4></a></li>
+            </div>          
         </div>
-        <div class="col-xs-6 col-md-4">
-            <!-- <figure><img src="{% static 'images\Incubators.png' %}" alt='Incubators' style="height: 110%"></figure>
-            <div class="text">
-                <h2>Incubators</h2>
+
+        <div class="content"> 
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Chromatography.png' %}" alt='Chromatography'>
+            <h3 class="name-text">Chromatography</h3> 
+            <div class="content-details fadeIn-bottom">
+              <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+              <li><a href="ChromatographyEquipments"><h4>View more</h4></a></li>
             </div>
-            <div class="overlay">
-                <div class="overlay-text">
-                    <h2>Incubators</h2>
-                    <h5>Basic equipment present in all the labs</h5>
-                </div>
-            </div>         -->
-            
+        </div>
+    </div>
 
-            <div class="slider">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-                <a href="#slide-4"></a>
-                <a href="#slide-5"></a>
-                <a href="#slide-6"></a>
-
-                <div class="slides">
-                    <div id="slide-1">
-                        <figure><img src="https://static4.depositphotos.com/1005563/379/i/600/depositphotos_3798254-stock-photo-eco-laboratory.jpg" alt='Incubators' style="height: 100%"></figure>
-                        <div class="text">
-                            <h2>Slide to explore some more categories</h2>
-                            
-                        </div>         
-                        <div class="overlay">
-                            <div class="overlay-text">
-                                <h2>Other Ctegories</h2>
-                                <h5>Basic equipment present in all the labs</h5>
-                            </div>
-                        </div>               
-                    </div>                    
-                    <div id="slide-2">
-                        <figure><img src="{% static 'images\Sequencing.png' %}" alt='Incubators' style="height: 100%"></figure>
-                        <div class="text">
-                            <h2>Sequencing</h2>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-text">
-                                <h2>Sequencing</h2>
-                                <h5>Basic equipment present in all the labs</h5>
-                            </div>
-                        </div> 
-                    </div>
-                    <div id="slide-3">
-                        <figure><img src="{% static 'images\PCR.png' %}" alt='Incubators' style="height: 100%"></figure>
-                        <div class="text">
-                            <h2>PCR</h2>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-text">
-                                <h2>PCR</h2>
-                                <h5>Basic equipment present in all the labs</h5>
-                            </div>
-                        </div> 
-                    </div>
-                    <div id="slide-4">
-                        <figure><img src="{% static 'images\Refrigerators.png' %}" alt='Incubators' style="height: 100%"></figure>
-                        <div class="text">
-                            <h2>Refrigerators</h2>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-text">
-                                <h2>Refrigerators</h2>
-                                <h5>Basic equipment present in all the labs</h5>
-                            </div>
-                        </div> 
-                    </div>
-                    <div id="slide-5">
-                        <figure><img src="{% static 'images\Bioreactors.png' %}" alt='Incubators' style="height: 100%"></figure>
-                        <div class="text">
-                            <h2>Bioreactors</h2>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-text">
-                                <h2>Bioreactors</h2>
-                                <h5>Basic equipment present in all the labs</h5>
-                            </div>
-                        </div> 
-                    </div>
-                    <div id="slide-6">
-                        <figure><img src="{% static 'images\Incubators.png' %}" alt='Incubators' style="height: 100%"></figure>
-                        <div class="text">
-                            <h2>Incubators</h2>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-text">
-                                <h2>Incubators</h2>
-                                <h5>Basic equipment present in all the labs</h5>
-                            </div>
-                        </div> 
-                    </div>
-                    <div id="slide-7">
-                        <figure><img src="{% static 'images\Miscellaneous.png' %}" alt='Incubators' style="height: 100%"></figure>
-                        <div class="text">
-                            <h2>Miscellaneous</h2>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-text">
-                                <h2>Miscellaneous</h2>
-                                <h5>Basic equipment present in all the labs</h5>
-                            </div>
-                        </div> 
-                    </div>            
-                    
-                </div>
-                
-            </div>                       
+    <div class="row">
+        <div class="content">                     
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Spectroscopy.png' %}" alt='Spectroscopy'>
+            <h3 class="name-text">Spectroscopy</h3> 
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li><a href="SpectroscopyEquipments"><h4>View more</h4></a></li>
+            </div>            
+        </div> 
+        
+        <div class="content">                     
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\X-rayCrystallography.png' %}" alt='X-ray Crystallography'>
+            <h3 class="name-text">X-ray Crystallography</h3> 
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li><a href="XrayCrystallographyEquipments"><h4>View more</h4></a></li>
+            </div>            
         </div>        
-    </div>  
-    
+        
+    </div>
+
+
     <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway);
 
-        * {
-            box-sizing: border-box;
+        *, *:before, *:after{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing:border-box;
+        box-sizing: border-box;
         }
-        .slider {
-            width: 100%;
+
+        .name-text {
+            position: absolute;
+            bottom: 0%;
             text-align: center;
-            overflow: hidden;
+            font-size: 3.75rem;
+            font-weight: 600;
+            color: rgba(255,255,255, 0.8);
+            background-color: rgba(0,0,0,0.6);
+            text-transform: uppercase;
         }
-        .slides {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
+
+        .content:hover .name-text{
+            opacity:0;
         }
-        .slides::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-            margin-top: -10px;
-        }
-        /* .slides::-webkit-scrollbar-thumb {
-            background: #666;
-            border-radius: 10px;
-        }
-        .slides::-webkit-scrollbar-track {
-            background: transparent;
-        } */
-        .slides > div {
-            scroll-snap-align: start;
-            flex-shrink: 0;
-            width: 100%;
-            height: 80%;
-            margin-right: 50px;
-            border-radius: 10px;
-            background: #eee;
-            transform-origin: center center;
-            transform: scale(1);
-            transition: transform 0.5s;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 100px;
-        }
-        .slider > a {
-            display: inline-flex;
-            width: 1.5rem;
-            height: 1.5rem;
-            background: white;
+
+        .content-details h4{
+            text-align: right;
             text-decoration: none;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            /* margin: 0 0 0.5rem 0; */
-            position: relative;
-        }
-        .slider > a:active {
-            top: 1px;
-            color: #1c87c9;
-        }
-        .slider > a:focus {
-            background: #eee;
-        }
-        /* Don't need button navigation */
-        @supports (scroll-snap-type) {
-            .slider > a {
-            display: none;
-            }
-        }      
-    </style>
-
-    <style>       
-
-        h3{
-            font-size: 6rem;
-            text-align: center;
-            font-weight: bold;
-            margin: 2% 35% 0 35% ;
-            width: 30%;
-            background: #000;
-            background:rgba(0, 0, 0, 0.3);
-            color:#fff;
-            mix-blend-mode: multiply;
+            font-size: 2rem;
+            
+            color: white;
         }
 
-        img{
-            position: relative;
-            max-width: 100%;
-            max-height: 100%;
-            display: inline-block; /* remove extra space below image */
-        }
-
-        .hover01 figure img {            
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transition: .3s ease-in-out;
-            transition: .3s ease-in-out;
-        }
-        
-        /* .hover01 figure:hover img {
-            -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-        } */
-        
         .row {
-            /* content: '';
-            clear: both; */
+            content: '';
+            clear: both;
             display: flex;
             flex-wrap: wrap;
             margin: 5%;
+        }        
+
+        .content {
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        margin: 2%;
+        overflow: hidden;
         }
 
-        /* * {
-        box-sizing: border-box;
-        } */
-
-        .text {
-            display:inline-block;
-            position:absolute;
-            bottom: 0%;
-            right: 5%;
-            left: 5%;
-            background: #000;
-            background:rgba(0, 0, 0, 0.5);
-            color:#fff;
-            width: 90%;
-            /* mix-blend-mode: multiply; */
-            padding: 2%;            
-        }
-               
-        h2{
-            font-size: 4rem;
-            font-weight: 600;
-        } 
-        
-        h5{
-            font-size: 1.5rem;
-            font-weight: lighter;
-        }
-
-        .overlay {
-            position: absolute;     
-            opacity:0;
-            bottom:0;
-            right:0;
-            top:100%;
-            height:0;
-            width:100%;
-            overflow: hidden;
-            transition: .5s ease;
-            background: #000;
-            background: rgba(0,0,0,0.6);
-            
-	    }
-
-        .hover01:hover .text{
-            opacity: 0;
-        }
-
-        .hover01:hover .h2{
-            opacity: 0;
-        }
-        
-
-        .col-xs-6:hover .overlay {
-            top: 0;
-            height: 100%;
-            opacity:0.5;            
-        }
-
-        .hover01:hover .overlay{
-        opacity: 1;       
-        }
-
-        .overlay-text {
-        color: white;
+        .content .content-overlay {
+        background: rgba(0,0,0,0.8);
         position: absolute;
-        top: 20%;
-        left: 35%;
-        /* -webkit-transform: translate(-50%, -50%); */
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: left;
+        height: 99%;
+        width: 100%;
+        left: 0;
+        top: 40%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
         }
 
-        /* .column div {
-            position: relative;
-            margin: auto;
-            width: 30%;
-            height: 30%;
-            padding: 2%;
-            display: flex;
-            justify-content: space-between;
-        } */
-                
-        /* .column div span {
-            position: relative;
-            left: 0;
-            z-index: -1;
-            display: block;
-            width: 100%;
-            color: #444;
-            font-size: 18px;
-            text-decoration: none;
-            text-align: center;
-            -webkit-transition: .3s ease-in-out;
-            transition: .3s ease-in-out;
-            opacity: 0;
-        } */
-        
-        figure {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            align-items: center;
+        .content:hover .content-overlay{
+        opacity: 1;
         }
+
+        .content-image{
+        width: 100%;
+        }
+
+        .content-details {
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        bottom: 0%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+        }
+
+        .content:hover .content-details{
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        }
+
         
-        figure:hover+span {
-            /* bottom: -36px; */
-            opacity: 1;
-            width: 100%;
-            height: 100%;
+        .content-details p{
+        position: relative;
+        color: #fff;
+        font-size: 1.5rem;
+        }
+
+        .fadeIn-bottom{
+        top: 80%;
         }
 
         @media screen and (max-width: 500px) {
@@ -903,7 +666,10 @@
                 width: 100%;
             }
         }
-    </style>
+
+    </style>          
+    
+    
 
     <!-- <div class="container-fluid bg-3 text-center">
         <h3>Sample</h3><br>
@@ -1060,7 +826,7 @@
                                             <textarea placeholder="Message"></textarea>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-12 .col-xs-12">
-                                            <h5 class="order btn btn-primary"><a href="#">Send</a></h5>
+                                            <h5 class="order btn btn-primary"><a href="mailto:bioequipzon@gmail.com">Send</a></h5>
                                         </div>
                                     </div>
                                 </form>
@@ -1090,7 +856,7 @@
                                 <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
                                 <li class="menu__item"><a class="menu__link" href="#">About</a></li>
                                 <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-                                <li class="menu__item"><a class="menu__link" href="biodomain\website\templates\team.html">Team</a></li>
+                                <li class="menu__item"><a class="menu__link" href="team">Team</a></li>
                                 <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
                             </ul>
 

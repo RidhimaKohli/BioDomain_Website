@@ -7,4 +7,13 @@ urlpatterns = [
     path('institutelistpage', views.InstituteListpage,name='institutelistpage'),
     path('categorylistpage', views.CategoryListpage,name='categorylistpage'),
     path('team', views.team,name='team'),
+    path('trial', views.trial,name='trial'),
+    path('BasicEquipments', views.BasicEquipments,name='BasicEquipments'),
+    path('BioimagingEquipments', views.BioimagingEquipments,name='BioimagingEquipments'),
+    path('CentrifugeEquipments', views.CentrifugeEquipments,name='CentrifugeEquipments'),
+    path('CellCultureEquipments', views.CellCultureEquipments,name='CellCultureEquipments'),
+    path('ElectrophoresisEquipments', views.ElectrophoresisEquipments,name='ElectrophoresisEquipments'),
+    path('ChromatographyEquipments', views.ChromatographyEquipments,name='ChromatographyEquipments'),
+    path('SpectroscopyEquipments', views.SpectroscopyEquipments,name='SpectroscopyEquipments'),
+    path('XrayCrystallographyEquipments', views.XrayCrystallographyEquipments,name='X-rayCrystallographyEquipments'),
 ]
