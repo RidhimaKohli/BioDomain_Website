@@ -16,4 +16,10 @@ urlpatterns = [
     path('ChromatographyEquipments', views.ChromatographyEquipments,name='ChromatographyEquipments'),
     path('SpectroscopyEquipments', views.SpectroscopyEquipments,name='SpectroscopyEquipments'),
     path('XrayCrystallographyEquipments', views.XrayCrystallographyEquipments,name='X-rayCrystallographyEquipments'),
+    path('SequencingEquipments', views.SequencingEquipments,name='SequencingEquipments'),
+    path('PCREquipments', views.PCREquipments,name='PCREquipments'),
+    path('RefrigeratorEquipments', views.RefrigeratorEquipments,name='RefrigeratorEquipments'),
+    path('IncubatorEquipments', views.IncubatorEquipments,name='IncubatorEquipments'),
+    path('BioreactorEquipments', views.BioreactorEquipments,name='BioreactorEquipments'),
+    path('MiscellaneousEquipments', views.MiscellaneousEquipments,name='MiscellaneousEquipments'),
 ]

@@ -36,7 +36,27 @@ def SpectroscopyEquipments(request):
     return render(request,'SpectroscopyEquipments.html', {})  
 
 def XrayCrystallographyEquipments(request):
-    return render(request,'XrayCrystallographyEquipments.html', {})  
+    return render(request,'XrayCrystallographyEquipments.html', {})
+
+def SequencingEquipments(request):
+    return render(request,'SequencingEquipments.html', {})  
+
+def PCREquipments(request):
+    return render(request,'PCREquipments.html', {})  
+
+def BioreactorEquipments(request):
+    return render(request,'BioreactorEquipments.html', {})  
+
+def RefrigeratorEquipments(request):
+    return render(request,'RefrigeratorEquipments.html', {})  
+
+def IncubatorEquipments(request):
+    return render(request,'IncubatorEquipments.html', {})  
+
+def MiscellaneousEquipments(request):
+    return render(request,'MiscellaneousEquipments.html', {})      
+
+
 
 def InstrumentListpage(request):
     allInst = Instruments.objects.all()

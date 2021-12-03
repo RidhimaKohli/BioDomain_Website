@@ -25,105 +25,242 @@
 
 <body>
 
-    <div class="row justify-content-center">
-        <div class="col-xs-4 col-md-4">
-            <div id="owl-example" class="owl-carousel">            
-                <div class="owl_text">
-                    <figure><img src="{% static 'images\Sequencing.png' %}" alt='Sequencing' style="height: 100%"></figure>
-                </div>
-                <div class="owl_text">
-                    <figure><img src="{% static 'images\PCR.png' %}" alt='PCR' style="height: 100%"></figure>
-                </div>
-                <div class="owl_text">
-                    <figure><img src="{% static 'images\Refrigerators.png' %}" alt='Refrigerators' style="height: 100%"></figure>
-                </div>
-                <div class="owl_text">
-                    <figure><img src="{% static 'images\Bioreactors.png' %}" alt='Bioreactors' style="height: 100%"></figure>
-                </div>
-                <div class="owl_text">
-                    <figure><img src="{% static 'images\Incubators.png' %}" alt='Incubators' style="height: 110%"></figure>
-                </div>
-                <div class="owl_text">
-                    <figure><img src="{% static 'images\Miscellaneous.png' %}" alt='Miscellaneous' style="height: 100%"></figure>
-                </div>
-            </div>        
+    <div class="content"> 
+        <div id="owl-example" class="owl-carousel">            
+            <div class="owl_text">
+                <img class="content-image" src="{% static 'images\Sequencing.png' %}" alt='Sequencing'>
+                <h3 class="name-text">Sequencing</h3> 
+                <div class="content-details fadeIn-bottom">
+                    <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                    <li><a href="SequencingEquipments"><h4>View more</h4></a></li>
+                </div>  
+            </div>
+            <div class="owl_text">
+                <img class="content-image" src="{% static 'images\PCR.png' %}" alt='PCR'>
+                <h3 class="name-text">PCR</h3> 
+                <div class="content-details fadeIn-bottom">
+                    <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                    <li><a href="PCREquipments"><h4>View more</h4></a></li>
+                </div> 
+            </div>
+            <div class="owl_text">
+                <img class="content-image" src="{% static 'images\Refrigerators.png' %}" alt='Refrigerators' >
+                <h3 class="name-text">Refrigerators</h3> 
+                <div class="content-details fadeIn-bottom">
+                    <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                    <li><a href="RefrigeratorEquipments"><h4>View more</h4></a></li>
+                </div> 
+            </div>
+            <div class="owl_text">
+                <img class="content-image" src="{% static 'images\Bioreactors.png' %}" alt='Bioreactors' >
+                <h3 class="name-text">Bioreactors</h3> 
+                <div class="content-details fadeIn-bottom">
+                    <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                    <li><a href="BioreactorEquipments"><h4>View more</h4></a></li>
+                </div> 
+            </div>
+            <div class="owl_text">
+                <img class="content-image" src="{% static 'images\Incubators.png' %}" alt='Incubators'>
+                <h3 class="name-text">Incubators</h3> 
+                <div class="content-details fadeIn-bottom">
+                    <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                    <li><a href="IncubatorEquipments"><h4>View more</h4></a></li>
+                </div> 
+            </div>
+            <div class="owl_text">
+                <img class="content-image" src="{% static 'images\Miscellaneous.png' %}" alt='Miscellaneous'>
+                <h3 class="name-text">Miscellaneous</h3> 
+                <div class="content-details fadeIn-bottom">
+                    <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                    <li><a href="MiscellaneousEquipments"><h4>View more</h4></a></li>
+                </div> 
+            </div>                
         </div>  
-    </div>
+    </div>          
+</div>
+
+<style>        
+
+    .owl-nav {
+        position: absolute;
+        top: calc(50%);
+        width: 100%;
+    }
+
+    .owl-nav div {
+        position: absolute;
+        top: 10%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .owl-prev {
+        left: 0;
+        display: flex;
+        background: white;            
+    }
+
+    .owl-prev:hover {
+        background: rgba(0,0,0,0.5);
+        color: #fff;
+    }
+
+    .owl-next {
+        right: 0;
+        display: flex;
+        background: white;
+    }
+
+    .owl-next:hover {
+        background: rgba(0,0,0,0.5);
+        color: #fff;
+    }
+
+    .owl-prev i,
+    .owl-next i {
+        margin: auto;
+    }
+</style>
 
 
-    <style>     
+<script>
+    $(document).ready(function() {
+    $("#owl-example").owlCarousel({
+    navigation: true, // Show next and prev buttons
+    slideSpeed: 300,
+    margin: 10,
+    paginationSpeed: 400,
+    autoplay: false,
+    items: 1,
+    itemsDesktop: false,
+    itemsDesktopSmall: false,
+    itemsTablet: false,
+    itemsMobile: false,
+    loop: true,
+    nav: true,
+    navText: ["<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>", "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"]
+    });
+    });
+</script>
+
+
+
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+    *, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+    }
+
+    .name-text {
+        position: absolute;
+        bottom: 0%;
+        text-align: center;
+        font-size: 3.75rem;
+        font-weight: 600;
+        color: rgba(255,255,255, 0.8);
+        background-color: rgba(0,0,0,0.6);
+        text-transform: uppercase;
+    }
+
+    .content:hover .name-text{
+        opacity:0;
+    }
+
+    .content-details h4{
+        text-align: right;
+        text-decoration: none;
+        font-size: 2rem;
         
+        color: white;
+    }
 
-        .owl-nav {
-            position: absolute;
-            top: calc(50% - 21px);
-            width: 107%;
-            left: -21px;
-        }
+    .row {
+        content: '';
+        clear: both;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5%;
+    }        
 
-        .owl-nav div {
-            position: absolute;
-            top: 10%;
-            border: 2px solid black;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
+    .content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 2%;
+    overflow: hidden;
+    }
 
-        .owl-prev {
-            left: 0;
-            display: flex;
-            background: white;
-        }
+    .content .content-overlay {
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 40%;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    }
 
-        .owl-prev:hover {
-            background: black;
-        }
+    .content:hover .content-overlay{
+    opacity: 1;
+    }
 
-        .owl-next {
-            right: 0;
-            display: flex;
-            background: white;
-        }
+    .content-image{
+    width: 100%;
+    }
 
-        .owl-next:hover {
-            background: black;
-        }
+    .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    bottom: 0%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    }
 
-        .owl-prev i,
-        .owl-next i {
-            margin: auto;
-        }
-
-        #owl-example .owl-item {
-            box-sizing: border-box;
-            padding: 0;
-            text-align: center;
-        }
-
-
-    </style>
+    .content:hover .content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    }
 
     
-    <script>
-        $(document).ready(function() {
-        $("#owl-example").owlCarousel({
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 300,
-        margin: 10,
-        paginationSpeed: 400,
-        autoplay: false,
-        items: 1,
-        itemsDesktop: false,
-        itemsDesktopSmall: false,
-        itemsTablet: false,
-        itemsMobile: false,
-        loop: true,
-        nav: true,
-        navText: ["<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>", "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"]
-        });
-        });
-    </script>
+    .content-details p{
+    position: relative;
+    color: #fff;
+    font-size: 1.5rem;
+    }
+
+    .fadeIn-bottom{
+    top: 80%;
+    }
+
+    @media screen and (max-width: 500px) {
+        .column {
+            width: 100%;
+        }
+    }
+
+</style>          
 
 </body>
 
