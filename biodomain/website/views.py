@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from website.models import Instruments
 from website.models import Institute
-from website.models import Category_Description
+from website.models import Categories
 # Create your views here.
 
 
@@ -15,25 +15,40 @@ def trial(request):
     return render(request,'trial.html', {})    
 
 def BasicEquipments(request):
-    return render(request,'BasicEquipments.html', {})  
+    allInst = Instruments.objects.filter(category='Basic')
+    context={'CatInstrument':allInst}
+    return render(request,'BasicEquipments.html', context)  
 
 def BioimagingEquipments(request):
-    return render(request,'BioimagingEquipments.html', {})          
+    allInst = Instruments.objects.filter(category='Bioimaging')
+    context={'CatInstrument':allInst}
+    return render(request,'BioimagingEquipments.html', context)          
 
 def CentrifugeEquipments(request):
-    return render(request,'CentrifugeEquipments.html', {})  
+    allInst = Instruments.objects.filter(category='Centrifuge')
+    context={'CatInstrument':allInst}
+    return render(request,'CentrifugeEquipments.html',context)  
 
 def CellCultureEquipments(request):
-    return render(request,'CellCultureEquipments.html', {})  
+    allInst = Instruments.objects.filter(category='Cell Culture')
+    context={'CatInstrument':allInst}
+    return render(request,'CellCultureEquipments.html', context)   
+
 
 def ElectrophoresisEquipments(request):
-    return render(request,'ElectrophoresisEquipments.html', {})  
+    allInst = Instruments.objects.filter(category='Electrophoresis')
+    context={'CatInstrument':allInst}
+    return render(request,'ElectrophoresisEquipments.html',context)  
 
 def ChromatographyEquipments(request):
-    return render(request,'ChromatographyEquipments.html', {})  
+    allInst = Instruments.objects.filter(category='Chromatography')
+    context={'CatInstrument':allInst}
+    return render(request,'ChromatographyEquipments.html', context)  
 
 def SpectroscopyEquipments(request):
-    return render(request,'SpectroscopyEquipments.html', {})  
+    allInst = Instruments.objects.filter(category='Spectroscopy')
+    context={'CatInstrument':allInst}
+    return render(request,'SpectroscopyEquipments.html', context)  
 
 def XrayCrystallographyEquipments(request):
     return render(request,'XrayCrystallographyEquipments.html', {})
@@ -58,18 +73,18 @@ def MiscellaneousEquipments(request):
 
 
 
-def InstrumentListpage(request):
+def InstrumentView(request):
     allInst = Instruments.objects.all()
     context={'instruments':allInst}
     return render(request,'instrumentlistpage.html', context)
 
-def InstituteListpage(request):
+def InstituteView(request):
     allInst = Institute.objects.all()
     context={'institute':allInst}
     return render(request,'institutelistpage.html', context)
 
-def CategoryListpage(request):
-    allCategory = Category_Description.objects.all()
+def CategoryView(request):
+    allCategory = Categories.objects.all()
     context={'category':allCategory}
     return render(request,'categorylistpage.html',context)
 

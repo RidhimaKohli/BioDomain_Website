@@ -172,31 +172,23 @@
     <table class=" table table-hover table-striped table-bordered ">
         <thead class="thead-dark ">
             <tr>
-                <th>Instrument_ID</th>
-                <th>Name</th>
-                <th>Model</th>
-                <th>Manufacturer</th>
+                <th>iid</th>
+                <th>Instrument Name</th>
                 <th>Category</th>
-                <th>Availability</th>
+                <th>Quantity</th>
+                <th>Description</th>
                 <th>Institute</th>
-                <th>Instrument Description</th>
-                <th>Origin</th>
-
             </tr>
         </thead>
         <tbody id="myTable">
             {% for e in instruments %}
             <tr>
-                <td class="cell ">{{e.Instrument_ID}}</td>
-                <td class="cell ">{{e.Name}}</td>
-                <td class="cell ">{{e.Model}}</td>
-                <td class="cell ">{{e.Manufacturer}}</td>
-                <td class="cell ">{{e.Category}}</td>
-                <td class="cell ">{{e.Availability}}</td>
-                <td class="cell ">{{e.Institute}}</td>
-                <td class="cell ">{{e.Instrument_Description}}</td>
-                <td class="cell ">{{e.Origin}}</td>
-
+                <td class="cell ">{{e.iid}}</td>
+                <td class="cell ">{{e.instrumentname}}</td>
+                <td class="cell ">{{e.category}}</td>
+                <td class="cell ">{{e.instrumentquantity}}</td>
+                <td class="cell">{{e.instrumentdescription}}</td>
+                <td class="cell ">{{e.institute}}</td>
 
             </tr>
             {% endfor %}
@@ -206,45 +198,6 @@
 
 </body>
 
-<!-- <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-</head>
 
-<body>
-    <h1>List of Instruments</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Instrument_ID</th>
-                <th>Name</th>
-                <th>Model</th>
-                <th>Manufacturer</th>
-                <th>Category</th>
-                <th>Availability</th>
-                <th>Institute</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for e in equipments %}
-            <tr>
-                <td>{{e.Instrument_ID}}</td>
-                <td>{{e.Name}}</td>
-                <td>{{e.Model}}</td>
-                <td>{{e.Manufacturer}}</td>
-                <td>{{e.Category}}</td>
-                <td>{{e.Availability}}</td>
-                <td>{{e.Institute}}</td>
-
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-</body> -->
 
 </html>
