@@ -4,6 +4,21 @@ from website.models import Institute
 from website.models import Categories
 # Create your views here.
 
+from django.core.mail import send_mail
+
+def emailForm(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        message = 'You have a mail from ' + name + '\n' + 'Message: ' + message
+        send_mail(subject, message, email, ['bioequipzon@gmail.com'], fail_silently=False)
+
+
+
+
+
 
 def home(request):
     return render(request,'index.html', {})

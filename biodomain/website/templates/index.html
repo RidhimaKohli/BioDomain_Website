@@ -82,8 +82,32 @@
 
         <a href="/instruments"><button class="button "><span>List of Equipments<br></span></button></a>
     </div>
+    <div class="container text-center" style="height: 10vh; margin-top: 1%">
 
+        <button class="button " data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span>About<br></span></button>
+
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                This website is a platform for the researchers to find the equipments in different institutes.
+            </div>
+
+        </div>
+    </div>
     <style>
+        .card {
+            font-size: 20px;
+            background-color: #0b4d07;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .form-control {
+            font-size: 20px;
+            padding: 20px;
+        }
+        
         .list_button_div {
             z-index: 50;
             justify-content: center;
@@ -997,65 +1021,68 @@
 
 
                     <div class="col-lg-6 col-md-12 col-sm-12 .col-xs-12">
-                        <div class="widget widget-contact">
+                        <div class="widget widget-contact ">
                             <h2 class="heading">Contact us via message</h2>
                             <div class="contact-forms">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-12 .col-xs-12">
-                                            <input type="text" placeholder="Your Name" />
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-12 .col-xs-12">
-                                            <input type="text" placeholder="Email Address" />
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-12 .col-xs-12">
-                                            <input type="text" placeholder="Subject" />
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-12 .col-xs-12">
-                                            <textarea placeholder="Message"></textarea>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-12 .col-xs-12">
-                                            <h5 class="order btn btn-primary"><a href="mailto:bioequipzon@gmail.com">Send</a></h5>
-                                        </div>
-                                    </div>
+                                <form action="mail.php" method="post" enctype="text/plain">
+
+
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name " /><br>
+                                    <input type="text " name="email" class="form-control" placeholder="Email Address " /><br>
+
+
+                                    <input type="text " class="form-control" name="subject" placeholder="Subject " /><br>
+
+
+                                    <textarea name="message" class="form-control" placeholder="Message "></textarea><br>
+                                    <button class="order btn btn-primary " type="submit " name="submit" value="Send "> Send</button>
+                                    <!-- <h5 class="order btn btn-primary ">Send</h5> -->
+
+
                                 </form>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12">
-                        <div class="icons">
-                            <!-- <ul class="social-icon">
-                                <li class="social-icon__item"><a class="social-icon__link" href="#">
-                                    <ion-icon name="logo-facebook"></ion-icon>
+                    <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12 ">
+                        <div class="icons ">
+                            <!-- <ul class="social-icon ">
+                                <li class="social-icon__item "><a class="social-icon__link " href="# ">
+                                    <ion-icon name="logo-facebook "></ion-icon>
                                     </a></li>
-                                <li class="social-icon__item"><a class="social-icon__link" href="#">
-                                    <ion-icon name="logo-twitter"></ion-icon>
-                                    </a></li>
-                                <li class="social-icon__item"><a class="social-icon__link" href="#">
-                                    <ion-icon name="logo-linkedin"></ion-icon>
-                                    </a></li>
-                                <li class="social-icon__item"><a class="social-icon__link" href="#">
-                                    <ion-icon name="logo-instagram"></ion-icon>
-                                    </a></li>
-                            </ul> -->
+                                                <li class="social-icon__item ">
+                                                    <a class="social-icon__link " href="# ">
+                                                        <ion-icon name="logo-twitter "></ion-icon>
+                                                    </a>
+                                                </li>
+                                                <li class="social-icon__item ">
+                                                    <a class="social-icon__link " href="# ">
+                                                        <ion-icon name="logo-linkedin "></ion-icon>
+                                                    </a>
+                                                </li>
+                                                <li class="social-icon__item ">
+                                                    <a class="social-icon__link " href="# ">
+                                                        <ion-icon name="logo-instagram "></ion-icon>
+                                                    </a>
+                                                </li>
+                                                </ul> -->
 
-                            <ul class="menu">
-                                <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-                                <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-                                <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-                                <li class="menu__item"><a class="menu__link" href="team">Team</a></li>
-                                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+                            <ul class="menu ">
+                                <li class="menu__item "><a class="menu__link " href="# ">Home</a></li>
+                                <li class="menu__item "><a class="menu__link " href="# ">About</a></li>
+                                <li class="menu__item "><a class="menu__link " href="# ">Services</a></li>
+                                <li class="menu__item "><a class="menu__link " href="team ">Team</a></li>
+                                <li class="menu__item "><a class="menu__link " href="# ">Contact</a></li>
                             </ul>
 
-                            <p style="text-align: center; font-size: 1.5rem; margin: 1rem">Designed & Maintained by IIT Jodhpur</p>
-                            <p style="text-align: center; font-size: 1.5rem; margin: 0rem">&copy; IITJ, 2021 | All Rights Reserved</p>
+                            <p style="text-align: center; font-size: 1.5rem; margin: 1rem ">Designed & Maintained by IIT Jodhpur</p>
+                            <p style="text-align: center; font-size: 1.5rem; margin: 0rem ">&copy; IITJ, 2021 | All Rights Reserved</p>
                         </div>
-                        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                        <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
+                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
 
-                        <div class="clearfix"></div>
+                        <div class="clearfix "></div>
                         <!-- Flickr Widget End -->
                     </div>
                 </div>
@@ -1127,12 +1154,12 @@
             margin-bottom: 0%;
         }
         
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap ");
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
+            font-family: "Poppins ", sans-serif;
         }
         
         .footer {
@@ -1257,9 +1284,9 @@
             font-size: 18px;
         }
         
-        footer input[type="text"],
+        footer input[type="text "],
         footer textarea,
-        .blacksidebar .contact-forms input[type="text"],
+        .blacksidebar .contact-forms input[type="text "],
         .blacksidebar .contact-forms textarea {
             width: 100%;
             margin-bottom: 13px;
@@ -1267,9 +1294,9 @@
             border-radius: 0;
         }
         
-        footer.style1 input[type="text"],
+        footer.style1 input[type="text "],
         footer.style1 textarea,
-        .blacksidebar .contact-forms input[type="text"],
+        .blacksidebar .contact-forms input[type="text "],
         .blacksidebar .contact-forms textarea {
             color: #bdc3c7;
             background: #1d1e20;
@@ -1280,7 +1307,7 @@
             height: 117px;
         }
         
-        header .contact-forms input[type="text"],
+        header .contact-forms input[type="text "],
         header .contact-forms textarea {
             width: 100%;
             margin-bottom: 20px;
@@ -1290,12 +1317,12 @@
             border: #c4c4c4 solid 1px;
         }
         
-        header .contact-forms input[type="submit"],
+        header .contact-forms input[type="submit "],
         header .contact-forms button {
             width: auto !important;
         }
         
-        header .contact-forms input[type="submit"] i,
+        header .contact-forms input[type="submit "] i,
         header .contact-forms button i {
             margin-left: 10px;
         }
@@ -1334,7 +1361,7 @@
         }
     </style>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
     <script>
         AOS.init();
     </script>
