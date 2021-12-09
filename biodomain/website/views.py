@@ -29,6 +29,9 @@ def team(request):
 def trial(request):
     return render(request,'trial.html', {})    
 
+def listfrontend(request):
+    return render(request,'listfrontend.html', {})     
+
 def BasicEquipments(request):
     allInst = Instruments.objects.filter(category='Basic')
     context={'CatInstrument':allInst}
