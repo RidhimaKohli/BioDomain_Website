@@ -3,7 +3,7 @@ from website.models import Instruments
 from website.models import Institute
 from website.models import Categories
 # Create your views here.
-
+from json import dumps
 from django.core.mail import send_mail
 
 def emailForm(request):
@@ -30,7 +30,9 @@ def trial(request):
     return render(request,'trial.html', {})    
 
 def listfrontend(request):
-    return render(request,'listfrontend.html', {})     
+    allInst = Instruments.objects.all()
+    context={'instruments':allInst}
+    return render(request,'listfrontend.html', context)     
 
 def BasicEquipments(request):
     allInst = Instruments.objects.filter(category='Basic')
@@ -95,6 +97,11 @@ def InstrumentView(request):
     allInst = Instruments.objects.all()
     context={'instruments':allInst}
     return render(request,'instrumentlistpage.html', context)
+
+def test(request):
+    allInst = Instruments.objects.all()
+    context={'instruments':allInst}
+    return render(request,'test.html',context)
 
 def InstituteView(request):
     allInst = Institute.objects.all()
