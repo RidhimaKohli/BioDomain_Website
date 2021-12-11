@@ -97,23 +97,6 @@ def MiscellaneousEquipments(request):
 
 def InstrumentView(request):
     allInst = Instruments.objects.all()
-    context={'instruments':allInst}
-    return render(request,'instrumentlistpage.html', context)
-
-# def test(request):
-#     allInst = Instruments.objects.all()
-#     context={'instruments':allInst}
-#     d1={"iid":1,"name":"mic"}
-# aList = [d1, 58, 63]
-# jsonStr = json.dumps(aList)
-# print(jsonStr)
-#     for d in allInst
-#     context = {"instruments": json.dumps(allInst)}
-#     return render(request,'test.html',context=context)
-
-
-def test(request):
-    allInst = Instruments.objects.all()
     list_of_rows = []
     for row in allInst:
         print("row : ",row)
@@ -123,7 +106,7 @@ def test(request):
         print("----")
     print(list_of_rows)
     context={'instruments':json.dumps(list_of_rows)}
-    return render(request,'test.html',context=context)
+    return render(request,'instrumentlistpage.html',context=context)
 
 
 
