@@ -128,76 +128,69 @@
 
     <script>
 
-// var data = [
+rdata  = '{{ instruments|safe }}';
+console.log(rdata);
+console.log(typeof rdata);
+var data = jQuery.parseJSON(rdata);
+// console.log(typeof myJson);
+console.log(data.iid);
 
-// {% for item in instruments %}
-//       { "iid": {{item.iid}},
-//             "instrumentname": {{item.instrumentname}},
-//             "category": {{item.category}},
-//             "instrumentquantity": {{item.instrumentquantity}},
-//             "instrumentdescription":{{item.instrumentdescription}},
-//             "institute": {{item.institute}},
-//             "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
-//         },
-//     {% endfor %}
-
-// ];
-        var data = [
-        {
-            "iid": "1",
-            "instrumentname": "Microscope",
-            "category": "Basic",
-            "instrumentquantity": "4",
-            "instrumentdescription":"xyz",
-            "institute": "IITJ",
-            "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
-        },
-          {
-            "iid": "2",
-            "instrumentname": "Microwave",
-            "category": "Thermal",
-            "instrumentquantity": "4",
-            "instrumentdescription":"xyz",
-            "institute": "IITJ",
-            "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
-        },
-          {
-            "iid": "3",
-            "instrumentname": "Microscope",
-            "category": "Basic",
-            "instrumentquantity": "4",
-            "instrumentdescription":"xyz",
-            "institute": "IITB",
-            "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
-        },
-          {
-            "iid": "4",
-            "instrumentname": "Microscope",
-            "category": "Basic",
-            "instrumentquantity": "4",
-            "instrumentdescription":"xyz",
-            "institute": "IITK",
-            "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
-        },
-          {
-            "iid": "5",
-            "instrumentname": "Xray Machine",
-            "category": "Xray",
-            "instrumentquantity": "4",
-            "instrumentdescription":"xyz",
-            "institute": "IITM",
-            "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
-        },
-          {
-            "iid": "6",
-            "instrumentname": "Micrometer",
-            "category": "Basic",
-            "instrumentquantity": "4",
-            "instrumentdescription":"xyz",
-            "institute": "IITJ",
-            "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
-        }
-        ];
+        // var data = [
+        // {
+        //     "iid": "1",
+        //     "instrumentname": "Microscope",
+        //     "category": "Basic",
+        //     "instrumentquantity": "4",
+        //     "instrumentdescription":"xyz",
+        //     "institute": "IITJ",
+        //     "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
+        // },
+        //   {
+        //     "iid": "2",
+        //     "instrumentname": "Microwave",
+        //     "category": "Thermal",
+        //     "instrumentquantity": "4",
+        //     "instrumentdescription":"xyz",
+        //     "institute": "IITJ",
+        //     "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
+        // },
+        //   {
+        //     "iid": "3",
+        //     "instrumentname": "Microscope",
+        //     "category": "Basic",
+        //     "instrumentquantity": "4",
+        //     "instrumentdescription":"xyz",
+        //     "institute": "IITB",
+        //     "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
+        // },
+        //   {
+        //     "iid": "4",
+        //     "instrumentname": "Microscope",
+        //     "category": "Basic",
+        //     "instrumentquantity": "4",
+        //     "instrumentdescription":"xyz",
+        //     "institute": "IITK",
+        //     "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
+        // },
+        //   {
+        //     "iid": "5",
+        //     "instrumentname": "Xray Machine",
+        //     "category": "Xray",
+        //     "instrumentquantity": "4",
+        //     "instrumentdescription":"xyz",
+        //     "institute": "IITM",
+        //     "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
+        // },
+        //   {
+        //     "iid": "6",
+        //     "instrumentname": "Micrometer",
+        //     "category": "Basic",
+        //     "instrumentquantity": "4",
+        //     "instrumentdescription":"xyz",
+        //     "institute": "IITJ",
+        //     "image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"
+        // }
+        // ];
 
         var products = "",
             instituteS = "",

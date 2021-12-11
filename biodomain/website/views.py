@@ -3,7 +3,9 @@ from website.models import Instruments
 from website.models import Institute
 from website.models import Categories
 # Create your views here.
+import json
 from json import dumps
+
 from django.core.mail import send_mail
 
 def emailForm(request):
@@ -98,10 +100,33 @@ def InstrumentView(request):
     context={'instruments':allInst}
     return render(request,'instrumentlistpage.html', context)
 
+# def test(request):
+#     allInst = Instruments.objects.all()
+#     context={'instruments':allInst}
+#     d1={"iid":1,"name":"mic"}
+# aList = [d1, 58, 63]
+# jsonStr = json.dumps(aList)
+# print(jsonStr)
+#     for d in allInst
+#     context = {"instruments": json.dumps(allInst)}
+#     return render(request,'test.html',context=context)
+
+
 def test(request):
     allInst = Instruments.objects.all()
-    context={'instruments':allInst}
-    return render(request,'test.html',context)
+    list_of_rows = []
+    for row in allInst:
+        print("row : ",row)
+        # rowdumped = {"iid" : json.dumps(row.iid),"instrumentname":json.dumps(row.instrumentname),"category": json.dumps(row.category) , "instrumentquantity" : json.dumps(row.instrumentquantity) , "instrumentdescription" :json.dumps(row.instrumentdescription),"institute":json.dumps(row.institute),"image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"}
+        rowdumped = {"iid" : row.iid,"instrumentname":row.instrumentname,"category": row.category , "instrumentquantity" : row.instrumentquantity , "instrumentdescription" :row.instrumentdescription,"institute":row.institute,"image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"}
+        list_of_rows.append(rowdumped)
+        print("----")
+    print(list_of_rows)
+    context={'instruments':json.dumps(list_of_rows)}
+    return render(request,'test.html',context=context)
+
+
+
 
 def InstituteView(request):
     allInst = Institute.objects.all()
