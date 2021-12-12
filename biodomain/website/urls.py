@@ -1,6 +1,10 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
+
+
+app_name = "main"
+
 urlpatterns = [
     path('', views.home ,name='home'),
     path('instruments', views.InstrumentView,name='instrumentlistpage'),
@@ -23,4 +27,7 @@ urlpatterns = [
     path('IncubatorEquipments', views.IncubatorEquipments,name='IncubatorEquipments'),
     path('BioreactorEquipments', views.BioreactorEquipments,name='BioreactorEquipments'),
     path('MiscellaneousEquipments', views.MiscellaneousEquipments,name='MiscellaneousEquipments'),
+    path("contact", views.contact, name="contact"),    
 ]
+
+

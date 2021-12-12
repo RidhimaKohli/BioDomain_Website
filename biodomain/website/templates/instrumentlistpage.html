@@ -50,19 +50,7 @@
         </ul>
     </div>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                </button>
-            </div>
-
-        </div>
-    </nav>
-
+  
     <div class="container">
         <div class="mb-3" id="search">
             <form id="search-form" action="" method="POST" enctype="multipart/form-data">
@@ -79,14 +67,20 @@
             <form>
 
                 <div class="form-group col-sm-3 col-xs-6">
-                    <select data-filter="institute" class="filter-institute filter form-control" placeholder="select institute">
-                        <option value="">Select Institute</option>
+                    <select data-filter="institute" class="filter-institute filter" required>
+                        <option value="" disabled selected hidden>Select Institute</option>                        
                         <option value="">Show All</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-3 col-xs-6">
-                    <select data-filter="category" class="filter-category filter form-control" placeholder="select category">
-                        <option value="">Select Category</option>
+                    <select data-filter="category" class="filter-category filter" required>
+                        <option value="" disabled selected hidden>Select Category</option>                        
+                        <option value="">Show All</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="state" class="filter-category filter" required>
+                        <option value="" disabled selected hidden>Select State</option>                        
                         <option value="">Show All</option>
                     </select>
                 </div>
@@ -100,9 +94,15 @@
 
     <style>
         #search {
-            margin-top: 5%;
+            margin-top: 7%;
         }
         
+        .filter{
+            width: 100%;
+            padding: 2%;
+            font-size: 2rem;
+        }
+
         .form-group {
             margin-top: 2%;
         }
