@@ -77,16 +77,16 @@ WSGI_APPLICATION = 'biodomain.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'table',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'table',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
@@ -134,9 +134,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'contactbioequipzone@gmail.com'
+DEFAULT_FROM_EMAIL = 'bioequipzon@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com' 
-EMAIL_HOST_USER = 'contactbioequipzone@gmail.com' 
-EMAIL_HOST_PASSWORD = '<password>' 
+EMAIL_HOST_USER = 'bioequipzon@gmail.com' 
+EMAIL_HOST_PASSWORD = 'bio0equipz0n@iitj' 
 EMAIL_PORT = 587 
 EMAIL_USE_TLS = True 
