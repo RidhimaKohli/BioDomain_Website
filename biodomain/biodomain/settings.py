@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'import_export',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,5 @@ EMAIL_HOST_USER = 'bioequipzon@gmail.com'
 EMAIL_HOST_PASSWORD = 'bio0equipz0n@iitj' 
 EMAIL_PORT = 587 
 EMAIL_USE_TLS = True 
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

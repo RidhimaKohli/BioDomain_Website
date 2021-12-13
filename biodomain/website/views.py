@@ -94,12 +94,12 @@ def InstrumentView(request):
     allInst = Instruments.objects.all()
     list_of_rows = []
     for row in allInst:
-        print("row : ",row)
+        # print("row : ",row)
         # rowdumped = {"iid" : json.dumps(row.iid),"instrumentname":json.dumps(row.instrumentname),"category": json.dumps(row.category) , "instrumentquantity" : json.dumps(row.instrumentquantity) , "instrumentdescription" :json.dumps(row.instrumentdescription),"institute":json.dumps(row.institute),"image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"}
         rowdumped = {"iid" : row.iid,"instrumentname":row.instrumentname,"category": row.category , "instrumentquantity" : row.instrumentquantity , "instrumentdescription" :row.instrumentdescription,"institute":row.institute,"image": "http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd"}
         list_of_rows.append(rowdumped)
-        print("----")
-    print(list_of_rows)
+    #     print("----")
+    # print(list_of_rows)
     context={'instruments':json.dumps(list_of_rows)}
     return render(request,'instrumentlistpage.html',context=context)
 

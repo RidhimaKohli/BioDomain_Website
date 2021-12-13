@@ -43,7 +43,7 @@
     </label>
     <div id="sidebarMenu">
         <ul class="sidebarMenuInner">
-            <li><a href="#" target="_blank">Home</a></li>
+            <li><a href="/" target="_blank">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="team" target="_blank">Meet Our Team</a></li>
             <li><a href="listfrontend" target="_blank">List</a></li>
@@ -79,7 +79,7 @@
                     </select>
                 </div>
                 <div class="form-group col-sm-3 col-xs-6">
-                    <select data-filter="instrument" class="filter-category filter" required>
+                    <select data-filter="instrumentname" class="filter-instrumentname filter" required>
                         <option value="" disabled selected hidden>Select Instrument</option>                        
                         <option value="">Show All</option>
                     </select>
@@ -131,13 +131,14 @@
 rdata  = '{{ instruments|safe }}';
 
 var data = jQuery.parseJSON(rdata);
-// console.log(typeof myJson);
+
 
 
       
         var products = "",
             instituteS = "",
-            categories = "";
+            categories = "",
+            instrumentS="";
 
         for (var i = 0; i < data.length; i++) {
 
@@ -162,6 +163,10 @@ var data = jQuery.parseJSON(rdata);
             if (categories.indexOf("<option value='" + category + "'>" + category + "</option>") == -1) {
                 categories += "<option value='" + category + "'>" + category + "</option>";
             }
+
+             if (instrumentS.indexOf("<option value='" + instrumentname + "'>" + instrumentname + "</option>") == -1) {
+                instrumentS += "<option value='" + instrumentname + "'>" + instrumentname + "</option>";
+            }
         }
 
 
@@ -171,6 +176,7 @@ var data = jQuery.parseJSON(rdata);
 
         $(".filter-institute").append(instituteS);
         $(".filter-category").append(categories);
+        $(".filter-instrumentname").append(instrumentS)
 
         var filtersObject = {};
 
@@ -209,9 +215,10 @@ var data = jQuery.parseJSON(rdata);
             $(".product").hide();
             $(".product").each(function() {
                 var institute = $(this).data("institute").toLowerCase(),
-                    category = $(this).data("category").toLowerCase();
+                    category = $(this).data("category").toLowerCase(),
+                    instrumentname = $(this).data("instrumentname").toLowerCase();
 
-                if (institute.indexOf(query) > -1 || category.indexOf(query) > -1) {
+                if (institute.indexOf(query) > -1 || category.indexOf(query) > -1 || instrumentname.indexOf(query) > -1) {
                     $(this).show();
                 }
             });
