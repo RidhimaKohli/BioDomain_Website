@@ -22,4 +22,6 @@ urlpatterns = [
     path('IncubatorEquipments', views.IncubatorEquipments,name='IncubatorEquipments'),
     path('BioreactorEquipments', views.BioreactorEquipments,name='BioreactorEquipments'),
     path('MiscellaneousEquipments', views.MiscellaneousEquipments,name='MiscellaneousEquipments'),
+    path('contact/', views.contactView, name='contact'),
+    path('success/', views.successView, name='success'),
 ]

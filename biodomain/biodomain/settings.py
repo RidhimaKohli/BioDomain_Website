@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'biodomain.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'table',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -127,3 +131,12 @@ STATICFILES_DIRS= [os.path.join(BASE_DIR,'static'),]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'contactbioequipzone@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com' 
+EMAIL_HOST_USER = 'contactbioequipzone@gmail.com' 
+EMAIL_HOST_PASSWORD = '<password>' 
+EMAIL_PORT = 587 
+EMAIL_USE_TLS = True 
