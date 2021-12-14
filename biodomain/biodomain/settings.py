@@ -146,4 +146,4 @@ EMAIL_HOST_PASSWORD = 'bio0equipz0n@iitj'
 EMAIL_PORT = 587 
 EMAIL_USE_TLS = True 
 
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
