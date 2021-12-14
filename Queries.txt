@@ -1,0 +1,69 @@
+Create Table Categories(
+    Category varchar(255) NOT NULL,
+    CategoryDescription varchar(255) NOT NULL,
+    PRIMARY KEY (Category)
+);
+
+Create Table Institute(
+    Institute varchar(255) NOT NULL,
+    InstituteLocation varchar(255) NOT NULL,
+    InstituteContact varchar(255) NOT NULL,
+    InstituteEmail varchar(255) NOT NULL,
+    Pincode int(11) ,
+    PRIMARY KEY (Institute)
+);
+
+Create Table Instruments(
+    IID int NOT NULL AUTO_INCREMENT,
+    InstrumentName varchar(255) NOT NULL,
+    Category varchar(255) NOT NULL,
+    InstrumentQuantity int NOT NULL,
+    InstrumentDescription varchar(255) NOT NULL,
+    Institute varchar(255) NOT NULL,
+    PRIMARY KEY (IID),
+    FOREIGN KEY (Category) REFERENCES Categories(Category),
+    FOREIGN KEY (Institute) REFERENCES Institute(Institute)    
+);
+
+insert into Categories(Category, CategoryDescription) values('Spectroscopy', 'Spectroscopy is the technique of measuring the interaction of light with matter');
+insert into Categories(Category, CategoryDescription) values('Chromatography', 'Chromatography is a laboratory technique for the separation of a mixture into its components');
+insert into Categories(Category, CategoryDescription) values('Microscopy', 'Microscopy is the technical field of using microscopes to view objects and areas of objects that cannot be seen with the naked eye');
+insert into Categories(Category, CategoryDescription) values('Thermal Analyzer', 'Thermal analysis is a general term defining a technique used to analyze the time and temperature at which physical changes occur when a substance is heated or cooled.');
+insert into Categories(Category, CategoryDescription) values('X-Ray Difractometer', 'A diffractometer is a measuring instrument for analyzing the structure of a material from the scattering pattern produced when a beam of radiation or particles interacts with it.');
+insert into Categories(Category, CategoryDescription) values('Catalytic Surface Analyzer', 'Analyzer for the acidity/basicity of solid catalysts, metal dispersion rate, BET surface area & adsorption breakthrough curve');
+insert into Categories(Category, CategoryDescription) values('Magnetometer', 'A magnetometer is a device that measures magnetic field or magnetic dipole moment.');
+insert into Categories(Category, CategoryDescription) values('Miscellaneous', 'Miscellaneous Instruments');
+
+insert into Institute values('IITJ', 'Jodhpur', '99999', 'iitj@iitj.ac.in', '342001');
+
+insert into Instruments values(1, 'NMR Spectroscopy', 'Spectroscopy', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(2, 'UV -Vis Spectroscopy', 'Spectroscopy', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(3, 'FT-IR Spectrometer', 'Spectroscopy', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(4, 'Fluorescence Spectrometer', 'Spectroscopy', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(5, 'CD Spectrometer', 'Spectroscopy', 4, 'aaaaa', 'IITJ');
+
+insert into Instruments values(6, 'HPLC', 'Chromatography', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(7, 'GC (Gas Chromatograph)', 'Chromatography', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(8, 'Acta Purifier UPC 10 (FPLC)', 'Chromatography', 4, 'aaaaa', 'IITJ');
+
+insert into Instruments values(9, 'Atomic Force Microscope (AFM)', 'Microscopy', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(10, 'Scanning Electron Microscope (SEM)', 'Microscopy', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(11, 'Fluorescence Microscopy (Inverted)', 'Microscopy', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(12, 'Optical Microscopy', 'Microscopy', 4, 'aaaaa', 'IITJ');
+
+insert into Instruments values(13, 'Advance Powder X-Ray Diffractometer', 'X-Ray Difractometer', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(14, 'Single Crystal X-Ray Diffractometer', 'X-Ray Difractometer', 4, 'aaaaa', 'IITJ');
+
+insert into Instruments values(15, 'Differential Scanning Calorimetry (DSC)', 'Thermal Analyzer', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(16, 'Isothermal Titration Calorimetry (ITC)', 'Thermal Analyzer', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(17, 'Simultaneous Thermal Analyzer (STA)', 'Thermal Analyzer', 4, 'aaaaa', 'IITJ');
+
+insert into Instruments values(18, 'BET Physisorption', 'Catalytic Surface Analyzer', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(19, 'Chemisorption', 'Catalytic Surface Analyzer', 4, 'aaaaa', 'IITJ');
+
+insert into Instruments values(20, 'SQUID', 'Magnetometer', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(21, 'PPMS Dynacool', 'Magnetometer', 4, 'aaaaa', 'IITJ');
+
+insert into Instruments values(22, 'Bench top flow cytometer', 'Miscellaneous', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(23, 'high-speed Centrifuge', 'Miscellaneous', 4, 'aaaaa', 'IITJ');
+insert into Instruments values(24, 'Freezer (-150 degree)', 'Miscellaneous', 4, 'aaaaa', 'IITJ');
