@@ -142,9 +142,9 @@ def contactView(request):
             try:
                 send_mail(subject, message, from_email, ['bioequipzon@gmail.com'])
             except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('success')
+                return render(request,'contact.html')
+            return redirect('home')
     return render(request, "email.html", {'form': form})
 
 def successView(request):
-    return HttpResponse('Your message is successfully sent!')
+    return render(request,'index.html')
