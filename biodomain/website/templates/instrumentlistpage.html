@@ -50,7 +50,7 @@
         </ul>
     </div>
 
-  
+
     <div class="container">
         <div class="mb-3" id="search">
             <form id="search-form" action="" method="POST" enctype="multipart/form-data">
@@ -97,12 +97,12 @@
             margin-top: 7%;
         }
         
-        .filter{
+        .filter {
             width: 100%;
             padding: 2%;
             font-size: 2rem;
         }
-
+        
         .form-group {
             margin-top: 2%;
         }
@@ -127,18 +127,17 @@
     </style>
 
     <script>
+        rdata = '{{ instruments|safe }}';
 
-rdata  = '{{ instruments|safe }}';
-
-var data = jQuery.parseJSON(rdata);
-
+        var data = jQuery.parseJSON(rdata);
 
 
-      
+
+
         var products = "",
             instituteS = "",
             categories = "",
-            instrumentS="";
+            instrumentS = "";
 
         for (var i = 0; i < data.length; i++) {
 
@@ -151,9 +150,9 @@ var data = jQuery.parseJSON(rdata);
                 image = data[i].image;
 
             //create product cards
-            products += "<div class='col-sm-4 product'  data-institute='" + institute + "' data-category='" + category +  "'><div class='product-inner text-center'><img src='" + image + "'><br />IID: " + iid +"<br />Instrument Name: " + instrumentname +"<br />Description: " + instrumentdescription +"<br />Institute: " + institute + "<br />Quantity: " + instrumentquantity +"<br />Category: " + category + "<br />"  + "</div></div>";
+            products += "<div class='col-sm-4 product'  data-institute='" + institute + "' data-category='" + category + "' data-instrumentname='" + instrumentname + "'><div class='product-inner text-center'><img src='" + image + "'><br />IID: " + iid + "<br />Instrument Name: " + instrumentname + "<br />Description: " + instrumentdescription + "<br />Institute: " + institute + "<br />Quantity: " + instrumentquantity + "<br />Category: " + category + "<br />" + "</div></div>";
 
-     
+
             //create dropdown of instituteS
             if (instituteS.indexOf("<option value='" + institute + "'>" + institute + "</option>") == -1) {
                 instituteS += "<option value='" + institute + "'>" + institute + "</option>";
@@ -164,7 +163,7 @@ var data = jQuery.parseJSON(rdata);
                 categories += "<option value='" + category + "'>" + category + "</option>";
             }
 
-             if (instrumentS.indexOf("<option value='" + instrumentname + "'>" + instrumentname + "</option>") == -1) {
+            if (instrumentS.indexOf("<option value='" + instrumentname + "'>" + instrumentname + "</option>") == -1) {
                 instrumentS += "<option value='" + instrumentname + "'>" + instrumentname + "</option>";
             }
         }
@@ -172,7 +171,7 @@ var data = jQuery.parseJSON(rdata);
 
 
         $("#products").html(products);
-    
+
 
         $(".filter-institute").append(instituteS);
         $(".filter-category").append(categories);
