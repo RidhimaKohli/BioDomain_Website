@@ -4,40 +4,63 @@
 
 <head>
     <title>BioDomain Website</title>
+
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">    
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" />
+
+    <!-- Js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-
-
 
 </head>
 
 <body>
+
+    <!-- header -->
     <div class="header" style="text-align: right">
         <img src="{% static 'images\logo1.gif' %}" alt='IITJ logo' id="right">
     </div>
+
+    <style>
+        .header {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 100%;
+            box-shadow: none;
+            background-color: #004f34;
+            position: fixed;
+            height: 10% !important;
+            overflow: hidden;
+            z-index: 10;
+        }
+        
+        .header img {
+            height: 80%;
+            padding: 0.75% 1.5% 0 0;
+        }       
+    </style>
+    <!-- header -->
+
+
+    <!-- side menubar -->
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
         <div class="spinner diagonal part-1"></div>
@@ -49,25 +72,223 @@
             <li><a href="#" target="_blank">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="team" target="_blank">Meet Our Team</a></li>
-            <li><a href="listfrontend" target="_blank">List</a></li>
-            <!-- <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
-            <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li> -->
-
+            <li><a href="/instruments" target="_blank">List</a></li>
         </ul>
     </div>
 
+    <style>       
+        @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+        html,
+        body {
+            overflow-x: hidden;
+            height: 100%;
+        }
+        
+        body {
+            background: #fff;
+            padding: 0;
+            margin: 0;
+            font-family: 'Varela Round', sans-serif;
+        }        
+        
+        #sidebarMenu {
+            height: 100%;
+            position: fixed;
+            left: 0;
+            width: 250px;
+            margin-top: 60px;
+            transform: translateX(-250px);
+            transition: transform 250ms ease-in-out;
+            background: linear-gradient(180deg, #004f34 0%, rgb(64, 204, 83) 100%);
+            z-index: 10;
+        }
+        
+        .sidebarMenuInner {
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.10);
+        }
+        
+        .sidebarMenuInner li {
+            list-style: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 20px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        }
+        
+        .sidebarMenuInner li span {
+            display: block;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.50);
+        }
+        
+        .sidebarMenuInner li a {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        input[type="checkbox"]:checked~#sidebarMenu {
+            transform: translateX(0);
+        }
+        
+        input[type=checkbox] {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            display: none;
+        }
+        
+        .sidebarIconToggle {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: absolute;
+            z-index: 99;
+            height: 100%;
+            width: 100%;
+            margin: 2% 0 2% 2%;
+            height: 22px;
+            width: 22px;
+        }
+        
+        .spinner {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+        }
+        
+        .horizontal {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            position: relative;
+            float: left;
+            margin-top: 3px;
+        }
+        
+        .diagonal.part-1 {
+            position: relative;
+            transition: all 0.3s;
+            box-sizing: border-box;
+            float: left;
+        }
+        
+        .diagonal.part-2 {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            position: relative;
+            float: left;
+            margin-top: 3px;
+        }
+        
+        input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            opacity: 0;
+        }
+        
+        input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            transform: rotate(135deg);
+            margin-top: 8px;
+        }
+        
+        input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            transform: rotate(-135deg);
+            margin-top: -9px;
+        }
+    </style>
+    <!-- side menubar -->
+
+
+    <!-- body bg -->
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
 
+    <style>
+        .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, rgb(64, 204, 83) 50%, rgb(9, 180, 123) 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+        
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+        
+        .bg3 {
+            animation-duration: 5s;
+        }        
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+            100% {
+                transform: translateX(25%);
+            }
+        }
+    </style>
+    <!-- body bg -->
+
+
+    <!-- top container with name and list -->
     <div class="container text-center" style="height: 60vh; margin-top: 15%">
         <h1 class="animate__animated animate__slideInUp ">BioEquipZon</h1>
         <h4 class="animate__animated animate__fadeIn animate__delay-1s">Access the equipments in your zone</h4>
 
         <a href="/instruments"><button class="button "><span>List of Equipments<br></span></button></a>
     </div>
+
+    <style>        
+        h1 {
+            font-size: 7.5rem;
+            padding-bottom: 2%;
+        }
+        
+        h4 {
+            font-size: 2rem;
+            padding-bottom: 15%;
+        }
+        
+        .button {
+            border-radius: 20px;
+            background-color: #004f34;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 24px;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            height: 60px;
+            width: 300px;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+    </style>
+    <!-- top container with name and list -->
     
-    <div class= "about">        
+
+    <!-- about section -->
+    <div class="about">        
         <div class="mouse"></div>
         <div id="app">
             <section>
@@ -474,421 +695,10 @@
         })()
 
     </script>
+    <!-- about section -->
 
 
-
-
-
-
-
-
-    <style>
-        .card {
-            font-size: 20px;
-            background-color: #0b4d07;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 20px;
-        }
-        
-        .form-control {
-            font-size: 20px;
-            padding: 20px;
-        }
-        
-        .list_button_div {
-            z-index: 50;
-            justify-content: center;
-            align-items: center;
-            height: 5%;
-            width: 30%;
-            background-color: #013b03
-        }
-        
-        .navbar {
-            color: white;
-            background-color: #013b03;
-            margin-bottom: 0;
-            border-radius: 0;
-        }
-        
-        .navbar-inverse .navbar-nav>li>a {
-            color: white;
-        }
-        
-        .navbar-inverse .navbar-nav>li>a:hover {
-            background-color: #a2e63c;
-            color: black;
-        }
-        
-        .button {
-            border-radius: 20px;
-            background-color: #004f34;
-            border: none;
-            color: #FFFFFF;
-            text-align: center;
-            font-size: 24px;
-            padding-top: 20px;
-            padding-bottom: 50px;
-            height: 60px;
-            width: 300px;
-            transition: all 0.5s;
-            cursor: pointer;
-        }
-        
-        #about_button:hover {
-            background-color: #004f34;
-        }
-        
-        .about_content {
-            background-color: #004f34;
-        }
-        
-        @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-        html,
-        body {
-            overflow-x: hidden;
-            height: 100%;
-        }
-        
-        body {
-            background: #fff;
-            padding: 0;
-            margin: 0;
-            font-family: 'Varela Round', sans-serif;
-        }
-        
-        .header {
-            display: block;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 100%;
-            box-shadow: none;
-            background-color: #004f34;
-            position: fixed;
-            height: 10% !important;
-            overflow: hidden;
-            z-index: 10;
-        }
-        
-        .header img {
-            height: 80%;
-            padding: 0.75% 1.5% 0 0;
-        }
-        
-        .main {
-            margin: 0 auto;
-            display: block;
-            height: 100%;
-            margin-top: 60px;
-        }
-        
-        .mainInner {
-            display: table;
-            height: 100%;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .mainInner div {
-            display: table-cell;
-            vertical-align: middle;
-            font-size: 3em;
-            font-weight: bold;
-            letter-spacing: 1.25px;
-        }
-        
-        #sidebarMenu {
-            height: 100%;
-            position: fixed;
-            left: 0;
-            width: 250px;
-            margin-top: 60px;
-            transform: translateX(-250px);
-            transition: transform 250ms ease-in-out;
-            background: linear-gradient(180deg, #004f34 0%, rgb(64, 204, 83) 100%);
-            z-index: 10;
-        }
-        
-        .sidebarMenuInner {
-            margin: 0;
-            padding: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.10);
-        }
-        
-        .sidebarMenuInner li {
-            list-style: none;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 20px;
-            cursor: pointer;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-        }
-        
-        .sidebarMenuInner li span {
-            display: block;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.50);
-        }
-        
-        .sidebarMenuInner li a {
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        
-        input[type="checkbox"]:checked~#sidebarMenu {
-            transform: translateX(0);
-        }
-        
-        input[type=checkbox] {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            display: none;
-        }
-        
-        .sidebarIconToggle {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            cursor: pointer;
-            position: absolute;
-            z-index: 99;
-            height: 100%;
-            width: 100%;
-            top: 22px;
-            left: 15px;
-            height: 22px;
-            width: 22px;
-        }
-        
-        .spinner {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background-color: #fff;
-        }
-        
-        .horizontal {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            position: relative;
-            float: left;
-            margin-top: 3px;
-        }
-        
-        .diagonal.part-1 {
-            position: relative;
-            transition: all 0.3s;
-            box-sizing: border-box;
-            float: left;
-        }
-        
-        .diagonal.part-2 {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            position: relative;
-            float: left;
-            margin-top: 3px;
-        }
-        
-        input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            opacity: 0;
-        }
-        
-        input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            transform: rotate(135deg);
-            margin-top: 8px;
-        }
-        
-        input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
-            transition: all 0.3s;
-            box-sizing: border-box;
-            transform: rotate(-135deg);
-            margin-top: -9px;
-        }
-    </style>
-
-
-    <style>
-        .bg {
-            animation: slide 3s ease-in-out infinite alternate;
-            background-image: linear-gradient(-60deg, rgb(64, 204, 83) 50%, rgb(9, 180, 123) 50%);
-            bottom: 0;
-            left: -50%;
-            opacity: .5;
-            position: fixed;
-            right: -50%;
-            top: 0;
-            z-index: -1;
-        }
-        
-        .bg2 {
-            animation-direction: alternate-reverse;
-            animation-duration: 4s;
-        }
-        
-        .bg3 {
-            animation-duration: 5s;
-        }
-        
-        h1 {
-            font-size: 7.5rem;
-            padding-bottom: 2%;
-        }
-        
-        h4 {
-            padding-bottom: 15%;
-        }
-        
-        @keyframes slide {
-            0% {
-                transform: translateX(-25%);
-            }
-            100% {
-                transform: translateX(25%);
-            }
-        }
-    </style>
-
-    <!-- <div class=about_section>
-        <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
-          <svg xmlns="http://www.w3.org/2000/svg">
-            <symbol viewBox="0 0 24 24" id="expand-more">
-              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
-            </symbol>
-            <symbol viewBox="0 0 24 24" id="close">
-              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
-            </symbol>
-          </svg>
-        </div>
-        
-        <details>
-          <summary>
-            About
-            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-          </summary>
-          <p>This website contains information about biology and bioengineering related equipments and instruments present in various institute.</p>
-        </details>
-    </div> -->
-
-    <style>
-        .about_section details {
-            background-color: rgba(0, 79, 52, 0.8);
-            width: 50%;
-            min-height: 60px;
-            max-width: 700px;
-            padding: 20px 20px 20px 20px;
-            margin: 0 auto;
-            position: relative;
-            font-size: 24px;
-            border: 1px solid rgba(0, 0, 0, .1);
-            border-radius: 20px;
-            box-sizing: border-box;
-            transition: all .3s;
-        }
-        
-        .about_section details+details {
-            margin-top: 20px;
-        }
-        
-        .about_section details[open] {
-            min-height: 50px;
-            text-align: justify-content;
-            background-color: rgba(0, 79, 52, 0.8);
-            box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
-        }
-        
-        .about_section details p {
-            color: white;
-            padding-top: 5%;
-            font-size: 2rem;
-            font-weight: 300;
-        }
-        
-        .about_section summary {
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 500;
-            cursor: pointer;
-        }
-        
-        .about_section summary:focus {
-            outline: none;
-        }
-        
-        .about_section summary:focus::after {
-            content: "";
-            height: 100%;
-            width: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        
-        .about_section summary::-webkit-details-marker {
-            display: none
-        }
-        
-        .control-icon {
-            fill: white;
-            transition: .3s ease;
-            pointer-events: none;
-        }
-        
-        .control-icon-close {
-            display: none;
-        }
-        
-        .about_section details[open] .control-icon-close {
-            display: initial;
-            transition: .3s ease;
-        }
-        
-        .about_section details[open] .control-icon-expand {
-            display: none;
-        }
-    </style>
-
-
-
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-
-                } else {
-                    content.style.display = "block";
-
-                }
-            });
-        }
-    </script>
-
-    <!-- <div class="catagories">
-        <h3>Categories</h3>
-    </div> -->
-
-
+    <!-- categories -->
     <div class="row">
         <div class="col-xs-6 col-md-4">
             <div class="content">
@@ -1107,7 +917,6 @@
             </div>
         </div>
     </div>
-</div>
 
     <style>
         .owl-nav {
@@ -1150,32 +959,8 @@
         .owl-next i {
             margin: auto;
         }
-    </style>
 
 
-    <script>
-        $(document).ready(function() {
-            $("#owl-example").owlCarousel({
-                navigation: true, // Show next and prev buttons
-                slideSpeed: 300,
-                margin: 10,
-                paginationSpeed: 400,
-                autoplay: false,
-                items: 1,
-                itemsDesktop: false,
-                itemsDesktopSmall: false,
-                itemsTablet: false,
-                itemsMobile: false,
-                loop: true,
-                nav: true,
-                navText: ["<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>", "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"]
-            });
-        });
-    </script>
-
-
-
-    <style>
         @import url(https://fonts.googleapis.com/css?family=Raleway);
         *,
         *:before,
@@ -1284,7 +1069,29 @@
                 
     </style>
 
+
+    <script>
+        $(document).ready(function() {
+            $("#owl-example").owlCarousel({
+                navigation: true, // Show next and prev buttons
+                slideSpeed: 300,
+                margin: 10,
+                paginationSpeed: 400,
+                autoplay: false,
+                items: 1,
+                itemsDesktop: false,
+                itemsDesktopSmall: false,
+                itemsTablet: false,
+                itemsMobile: false,
+                loop: true,
+                nav: true,
+                navText: ["<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>", "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"]
+            });
+        });
+    </script>
+    <!-- categories -->
     
+    <!-- footer bg wave -->
     <div>
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
@@ -1298,133 +1105,6 @@
             </g>
         </svg>
     </div>
-
-    <!-- Google Map -->
-    <div class="mapouter">
-        <div class="gmap_canvas">
-            <iframe width="100%" height="100%" background-color="#004f34" id="gmap_canvas" src="https://maps.google.com/maps?q=Indian%20Institute%20of%20Technology,%20Jodhpur,%20342037&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <a href="https://123movies-org.net"></a>
-        </div>
-    </div>
-
-    <style>
-        .mapouter {
-            background-color: #004f34;
-            position: relative;
-            text-align: right;
-            height: 70%;
-            width: 100%;
-        }
-        
-        .gmap_canvas {
-            overflow: hidden;
-            height: 100%;
-            width: 100%;
-            padding: 5% 10% 0% 10%;
-        }
-    </style>
-    <!-- Google Map -->
-
-    <div class="grid">
-        <div id="item2" class="items">
-          <div class="footer">
-            <div class="icons">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <div class="text">
-                N.H. 65, Nagaur Road, Karwar 342037,<br> Jodhpur, Rajasthan
-              </div>
-            </div>
-            <div class="icons">
-              <i class="fa fa-envelope-o" aria-hidden="true"></i>
-              <div class="text"><a href="mailto:bioequipzon@gmail.com">bioequipzon@gmail.com</a></div>
-            </div>
-            <div class="icons">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <div class="text"><a href="tel:+91 (0) 291 280 1211">+91 (0) 291 280 1211</a></div>
-            </div>
-            <div class="icons">
-              <i class="fa fa-user-o" aria-hidden="true"></i>
-              <div class="text"><a href="/contact">Contact Us!</a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12 ">
-            <div class="icons">
-                <ul class="menu ">
-                    <li class="menu__item "><a class="menu__link " href="/ ">Home</a></li>
-                    <li class="menu__item "><a class="menu__link " href="# ">About</a></li>
-                    <li class="menu__item "><a class="menu__link " href="team ">Team</a></li>
-                    <li class="menu__item "><a class="menu__link " href="/contact">Contact</a></li>
-                </ul>                
-            </div>
-            <div class="icons-p">
-                <p style="text-align: center; font-size: 1.5rem; margin: 1rem ">Designed & Maintained by IIT Jodhpur</p>
-                <p style="text-align: center; font-size: 1.5rem; margin: 0rem ">&copy; IITJ, 2021 | All Rights Reserved</p>
-            </div>
-            <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
-
-            <div class="clearfix "></div>
-        </div>
-    </div>
-
-
-    <style>
-
-        .icons a{
-            text-decoration: none;
-            color: #FFFFFF;
-        }
-
-        .icons-p{
-            padding-bottom: 5%;
-        }
-
-        .icons-p p{
-            color: #FFFFFF;
-        }
-
-        .grid {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-        height: auto;
-        grid-gap: 1em;
-        position: relative;
-        width: 100%;
-        background: #004f34;
-        padding-top: 0%;
-        }
-        
-        .grid #item2 .footer {
-        display: flex;
-        flex-direction: row;
-        }
-        .grid #item2 .footer .icons {
-        margin: 0.5rem;
-        color: white;
-        font-size: 4rem;
-        text-align: center;
-        }
-        .grid #item2 .footer .icons i {
-        padding: 1rem;
-        }
-        .grid #item2 .footer .icons .text {
-        padding: 1rem;
-        font-family: sans-serif;
-        font-size: 2rem;
-        }
-
-        @media screen and (max-width: 700px) {
-            .footer {
-                display: flex;
-                flex-direction: column-reverse;
-                box-orient: vertical;
-            }
-        }
-    </style>    
-
 
     <style>
         /*Waves*/
@@ -1482,8 +1162,87 @@
             .content {
                 height: 30vh;
             }
+        }       
+        
+    </style>    
+    <!-- footer bg wave -->
+    
+
+    <!-- Google Map -->
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe width="100%" height="100%" background-color="#004f34" id="gmap_canvas" src="https://maps.google.com/maps?q=Indian%20Institute%20of%20Technology,%20Jodhpur,%20342037&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <a href="https://123movies-org.net"></a>
+        </div>
+    </div>
+
+    <style>
+        .mapouter {
+            background-color: #004f34;
+            position: relative;
+            text-align: right;
+            height: 70%;
+            width: 100%;
         }
         
+        .gmap_canvas {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            padding: 5% 10% 0% 10%;
+        }
+    </style>
+    <!-- Google Map -->
+
+
+    <!-- footer with contact and address -->
+    <div class="grid">
+        <div id="item2" class="items">
+          <div class="footer">
+            <div class="icons">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <div class="text">
+                N.H. 65, Nagaur Road, Karwar 342037,<br> Jodhpur, Rajasthan
+              </div>
+            </div>
+            <div class="icons">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <div class="text"><a href="mailto:bioequipzon@gmail.com">bioequipzon@gmail.com</a></div>
+            </div>
+            <div class="icons">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <div class="text"><a href="tel:+91 (0) 291 280 1211">+91 (0) 291 280 1211</a></div>
+            </div>
+            <div class="icons">
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+              <div class="text"><a href="/contact">Contact Us!</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12 ">
+            <div class="icons">
+                <ul class="menu ">
+                    <li class="menu__item "><a class="menu__link " href="/ ">Home</a></li>
+                    <li class="menu__item "><a class="menu__link " href="# ">About</a></li>
+                    <li class="menu__item "><a class="menu__link " href="team ">Team</a></li>
+                    <li class="menu__item "><a class="menu__link " href="/contact">Contact</a></li>
+                </ul>                
+            </div>
+            <div class="icons-p">
+                <p style="text-align: center; font-size: 1.5rem; margin: 1rem ">Designed & Maintained by IIT Jodhpur</p>
+                <p style="text-align: center; font-size: 1.5rem; margin: 0rem ">&copy; IITJ, 2021 | All Rights Reserved</p>
+            </div>
+            <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
+
+            <div class="clearfix "></div>
+        </div>
+    </div>
+
+
+    <style>
+
         .icons {
             margin-top: 5%;
             margin-bottom: 0%;
@@ -1560,8 +1319,62 @@
             font-size: 2rem;
             font-weight: 500;
         }
-    </style>    
 
+        .icons a{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .icons-p{
+            padding-bottom: 5%;
+        }
+
+        .icons-p p{
+            color: #FFFFFF;
+        }
+
+        .grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        height: auto;
+        grid-gap: 1em;
+        position: relative;
+        width: 100%;
+        background: #004f34;
+        padding-top: 0%;
+        }
+        
+        .grid #item2 .footer {
+        display: flex;
+        flex-direction: row;
+        }
+        .grid #item2 .footer .icons {
+        margin: 0.5rem;
+        color: white;
+        font-size: 4rem;
+        text-align: center;
+        }
+        .grid #item2 .footer .icons i {
+        padding: 1rem;
+        }
+        .grid #item2 .footer .icons .text {
+        padding: 1rem;
+        font-family: sans-serif;
+        font-size: 2rem;
+        }
+
+        @media screen and (max-width: 700px) {
+            .footer {
+                display: flex;
+                flex-direction: column-reverse;
+                box-orient: vertical;
+            }
+        }
+    </style>   
+    <!-- footer with contact and address --> 
+
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
     <script>
         AOS.init();

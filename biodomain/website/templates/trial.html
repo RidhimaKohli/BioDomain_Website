@@ -24,42 +24,270 @@
 </head>
 
 <body>
+    <div id="app">
+        <section>
+            <div class="row justify-content-center">
+            <div class="col-lg-7 container-fluid">
+            <div class="text">
+                <h2>About Us!</h2>
+                <p>
+                    Bioequipzon is a platform for researchers to access the specific equipment they need for their R&D work that is either available in the particular city or institute of their interest. <br> <br>
+                    The main objective of this website is to provide support to the researchers by providing them with a list of instruments available in various institutes across the country.
+                </p>
+                <a href="https://www.wildsouls.gr/en/" target="_blank">
+                    <span>VIEW MORE!</span>
+                </a>
+            </div>
+            </div>
+            <div class="col-md-4 container-fluid">
+            <div class='wrapper'>
+                <div class='carousel'>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                            <img src="{% static 'images\logo1.gif' %}" alt='IITJ logo'>
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>spouting whale</p>
+                        <p>Unicode: U+1F433</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                            <i class="fa fa-university" aria-hidden="true"></i>
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>whale</p>
+                        <p>Unicode: U+1F40B</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🐬
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>dolphin</p>
+                        <p>Unicode: U+1F42C</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🐟
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>fish</p>
+                        <p>Unicode: U+1F41F</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🐠
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>tropical fish</p>
+                        <p>Unicode: U+1F420</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🐡
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>blowfish</p>
+                        <p>Unicode: U+1F421</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🦈
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>shark</p>
+                        <p>Unicode: U+1F988</p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>   
+            </div>   
+            </div>        
+        </section>
+    </div>        
 
-    <div class= "about">        
-        <div class="mouse"></div>
-        <div id="app">
-            <section>
-                <div class="text">
-                    <h2>About Us!</h2>
-                    <p>
-                        Bioequipzon is a platform for researchers to access the specific equipment they need for their R&D work that is either available in the particular city or institute of their interest. <br> <br>
-                        The main objective of this website is to provide support to the researchers by providing them with a list of instruments available in various institutes across the country.
-                    </p>
-                    <a href="https://www.wildsouls.gr/en/" target="_blank">
-                        <span>VIEW MORE!</span>
-                    </a>
-                </div>
-                <div class="carousel">
-                    <div class="card c1">
-                        <h1>Institutes registered</h1>
-                        <h2>30+</h2>
-                    </div>
-                    <div class="card c2">
-                        <h1>Categories</h1>
-                        <h2>12+</h2>
-                    </div>
-                    <div class="card c3">
-                        <h1>Equipments listed</h1>
-                        <h2>300+</h2>
-                    </div>
-                    <div class="card c4">
-                        <h1>Manufacturing Companies</h1>
-                        <h2>8+</h2>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
+
+    <style>
+        *, *::before, *::after {
+        box-sizing: border-box;
+        }
+
+        .carousel__item img{
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        height: 100vh;
+        }
+
+        .wrapper {
+        background: linear-gradient(60deg, #420285, #08BDBD);
+        height: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        }
+
+        .carousel {
+        position: relative;
+        width: 120%;
+        max-width: 800px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 0 20% 0;
+        }
+
+        .carousel__item {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        filter: drop-shadow(0 2px 2px #555);
+        will-change: transform, opacity;
+        -webkit-animation: carousel-animate-vertical 27s linear infinite;
+                animation: carousel-animate-vertical 27s linear infinite;
+        }
+
+        .carousel__item:nth-child(1) {
+        -webkit-animation-delay: calc(3s * -1);
+                animation-delay: calc(3s * -1);
+        }
+
+        .carousel__item:nth-child(2) {
+        -webkit-animation-delay: calc(3s * 0);
+                animation-delay: calc(3s * 0);
+        }
+
+        .carousel__item:nth-child(3) {
+        -webkit-animation-delay: calc(3s * 1);
+                animation-delay: calc(3s * 1);
+        }
+
+        .carousel__item:nth-child(4) {
+        -webkit-animation-delay: calc(3s * 2);
+                animation-delay: calc(3s * 2);
+        }
+
+        .carousel__item:nth-child(5) {
+        -webkit-animation-delay: calc(3s * 3);
+                animation-delay: calc(3s * 3);
+        }
+
+        .carousel__item:nth-child(6) {
+        -webkit-animation-delay: calc(3s * 4);
+                animation-delay: calc(3s * 4);
+        }
+
+        .carousel__item:last-child {
+        -webkit-animation-delay: calc(-3s * 2);
+                animation-delay: calc(-3s * 2);
+        }
+
+        .carousel__item-head {
+        border-radius: 50%;
+        background-color: #d7f7fc;
+        width: 90px;
+        height: 90px;
+        padding: 14px;
+        position: relative;
+        margin-right: -45px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        }
+
+        .carousel__item-body {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 16px 20px 16px 70px;
+        }
+
+        .title {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-top: 10px;
+        }
+
+        @-webkit-keyframes carousel-animate-vertical {
+        0% {
+            transform: translateY(100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        3%, 11.1111111111% {
+            transform: translateY(100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        14.1111111111%, 22.2222222222% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        25.2222222222%, 33.3333333333% {
+            transform: translateY(-100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        36.3333333333% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: visible;
+        }
+        100% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        }
+
+        @keyframes carousel-animate-vertical {
+        0% {
+            transform: translateY(100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        3%, 11.1111111111% {
+            transform: translateY(100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        14.1111111111%, 22.2222222222% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        25.2222222222%, 33.3333333333% {
+            transform: translateY(-100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        36.3333333333% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: visible;
+        }
+        100% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        }
+    </style>
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
@@ -97,97 +325,59 @@
         list-style: none;
         }
 
-        body{
-            background-color: #000;
+        html,
+        body {
+        margin: 0;
+        padding: 0;
         }
 
-        .about {
-            position: relative; 
-            height: auto;
-            width: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 2%;
+        main {
+        display: block;
         }
 
-        .about::before {    
-            content: "";
-            background-image: url("https://wallpapercave.com/wp/wp5095618.jpg");
-            background-size: cover;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            opacity: 0.4;
-        }
-                      
         a {
         text-decoration: none;
         }
-        
-       
-        .carousel h1{
-            font-size: 6rem;
-            text-align: center;
-            padding: auto;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            padding: 4%;
+            margin: 0;
+            line-height: 1.5;
         }
 
-        .carousel h2{
-            font-size: 8rem;
-            text-align: center;
-            padding: auto;
+        html {
+        font-size: 10px;
+        font-family: "PT Sans", sans-serif;
         }
 
-
-        @media (max-width: 940px) {
-        .carousel h1 {
-            font-size: 5rem;
-        }
-        }
-        .carousel h2 {
-            font-size: 6rem;
-            margin-bottom: 10%;
-        }
-
-        #app {
-        width: 100%;
-        max-width: 1920px;
-        min-width: 320px;
-        margin: 0 auto;
+        body {
+        background-color: black;
         overflow: hidden;
         }
 
-        .mouse {
-        width: 60px;
-        height: 60px;
-        background-color: #000;
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-50%, -50%) scale(0.5);
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.5s, transform 0.5s;
-        z-index: 99;
+        @media (max-width: 768px) {
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
         }
-        .mouse::before {
-        content: ">";
-        display: block;
-        color: #fff;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2rem;
-        font-weight: 700;
         }
-        .mouse.hover {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-        }
+
+        #app {
+            background-image: url("https://wallpapercave.com/wp/wp5095618.jpg");
+            background-size: cover;
+            width: 96%;
+            max-width: 1920px;
+            min-width: 320px;
+            overflow: hidden;
+            margin: 2%;
+            opacity: 0.5;
+        }     
 
         section {
         display: flex;
@@ -208,19 +398,18 @@
         z-index: 2;
         }
         @media (max-width: 768px) {
-            section .text {
-                flex-basis: 100%;
-                margin-right: 0;
-                margin-bottom: 16%;
-            }
+        section .text {
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-bottom: 16%;
         }
-
+        }
         section .text h2 {
-        font-size: 7rem;
-        font-weight: 600;
+        font-size: 6rem;
+        font-weight: 700;
         letter-spacing: 2px;
         line-height: 1;
-        margin-bottom: 5%;
+        margin-bottom: 20px;
         }
         @media (max-width: 940px) {
         section .text h2 {
@@ -228,13 +417,12 @@
         }
         }
         section .text p {
-        font-size: 2rem;
-        line-height: 1.5;
-        margin-bottom: 10%;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
         }
         @media (max-width: 940px) {
         section .text p {
-            font-size: 2.2rem;
+            font-size: 1.6rem;
         }
         }
         section .text a {
@@ -279,22 +467,20 @@
         }
         section .carousel {
         flex-basis: 50%;
-        height: 20%;
-        margin-left: 10%;
+        height: 500px;
         position: relative;
         }
         @media (max-width: 768px) {
         section .carousel {
             flex-basis: 100%;
-            height: 20%;
+            height: 400px;
         }
         }
         section .carousel .card {
         width: 100%;
-        max-width: 350px;
+        max-width: 450px;
         position: absolute;
         top: 0;
-        height: 400px;
         left: 200%;
         opacity: 0;
         -webkit-user-select: none;
@@ -306,8 +492,7 @@
         }
         @media (max-width: 768px) {
         section .carousel .card {
-            max-width: 250px;
-            height: 300px;
+            max-width: 350px;
         }
         }
         section .carousel .card.c1 {
@@ -318,12 +503,8 @@
         transition-delay: 0.2s;
         }
         section .carousel .card.c3 {
-        transform: translateX(-50%) rotate(5deg);
+        transform: translateX(-50%) rotate(0deg);
         transition-delay: 0.4s;
-        }
-        section .carousel .card.c4 {
-        transform: translateX(-50%) rotate(-5deg);
-        transition-delay: 0.6s;
         }
         section .carousel .card.active {
         left: 50%;
@@ -339,102 +520,7 @@
         transition-delay: 0s;
         }
     </style>
-
-    <script>
-        'use strict'
-        ;(function () {
-            let isMobile =
-                navigator.userAgent.match(
-                    /Line|J2ME|Opera Mini|SonyEricsson|Nokia|iPhone|iPod|BB10|PlayBook|android|webOS|BlackBerry|Windows Phone|Windows CE|Android/i
-                ) != null
-            let scrollTop =
-                window.pageYOffset ||
-                document.documentElement.scrollTop ||
-                document.body.scrollTop
-            let carousel = document.querySelector('.carousel')
-            let cards = document.querySelectorAll('.card')
-            let c1 = document.querySelector('.c1')
-            let c2 = document.querySelector('.c2')
-            let c3 = document.querySelector('.c3')
-            let c4 = document.querySelector('.c4')
-            let mouse = document.querySelector('.mouse')
-            let status = 0
-            let moving = false
-
-            function clickCard() {
-                if (!moving) {
-                    moving = true
-                    status++
-                    changeCard(status)
-                }
-            }
-            function changeCard(status) {
-                if (status % 4 === 0) {
-                    cards.forEach((card) => {
-                        card.classList.remove('move')
-                        card.classList.remove('stage')
-                        card.classList.add('active')
-                    })
-                    hideCard()
-                }
-                if (status % 4 === 1) {
-                    c4.classList.add('move')
-                    c3.classList.add('stage')
-                    hideCard(c4)
-                }
-                if (status % 4 === 2) {
-                    c3.classList.add('move')
-                    c2.classList.add('stage')
-                    hideCard(c3)
-                }
-                if (status % 4 === 3) {
-                    c2.classList.add('move')
-                    c1.classList.add('stage')
-                    hideCard(c2)
-                }
-            }
-            function hideCard(el) {
-                if (el) {
-                    setTimeout(() => {
-                        el.classList.remove('active')
-                        el.classList.remove('move')
-                        el.classList.remove('stage')
-                    }, 500)
-                }
-                setTimeout(() => {
-                    moving = false
-                }, 700)
-            }
-            function cardEnter() {
-                mouse.classList.add('hover')
-            }
-            function cardLeave() {
-                mouse.classList.remove('hover')
-            }
-            function init() {
-                if (isMobile) mouse.style.display = 'none'
-                window.addEventListener('scroll', function () {
-                    scrollTop =
-                        window.pageYOffset ||
-                        document.documentElement.scrollTop ||
-                        document.body.scrollTop
-                })
-                window.addEventListener('mousemove', function (e) {
-                    mouse.style.top = e.y + scrollTop + 'px'
-                    mouse.style.left = e.x + 'px'
-                })
-                carousel.addEventListener('click', clickCard)
-                carousel.addEventListener('mouseenter', cardEnter)
-                carousel.addEventListener('mouseleave', cardLeave)
-                setTimeout(() => {
-                    cards.forEach((card) => card.classList.add('active'))
-                }, 500)
-            }
-            init()
-        })()
-
-    </script>        
-
+    
 </body>
 
 </html>
