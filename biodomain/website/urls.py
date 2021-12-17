@@ -9,7 +9,6 @@ urlpatterns = [
     path('categories', views.CategoryView,name='categorylistpage'),
     path('team', views.team,name='team'),
     path('trial', views.trial,name='trial'),
-    path('listfrontend', views.listfrontend,name='listfrontend'),
     path('BasicEquipments', views.BasicEquipments,name='BasicEquipments'),
     path('BioimagingEquipments', views.BioimagingEquipments,name='BioimagingEquipments'),
     path('CentrifugeEquipments', views.CentrifugeEquipments,name='CentrifugeEquipments'),
