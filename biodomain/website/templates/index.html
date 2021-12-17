@@ -287,6 +287,512 @@
     <!-- top container with name and list -->
     
 
+<div id="about">
+    <div id="app">
+        <section>
+            <div class="row justify-content-center">
+            <div class="col-lg-7 container-fluid">
+            <div class="text">
+                <h2>About Us!</h2>
+                <p>
+                    Bioequipzon is a platform for researchers to access the specific equipment they need for their R&D work that is either available in the particular city or institute of their interest. <br> <br>
+                    The main objective of this website is to provide support to the researchers by providing them with a list of instruments available in various institutes across the country.
+                </p>
+                <a href="https://www.wildsouls.gr/en/" target="_blank">
+                    <span>VIEW MORE!</span>
+                </a>
+            </div>
+            </div>
+            <div id = "about_cards" class="col-md-4 container-fluid">
+            <!-- <div class='wrapper'> -->
+                <div class='carousel'>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                            <img src="{% static 'images\research.png' %}">
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>Categories</p>
+                        <p>12+</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                            <i class="fa fa-university" aria-hidden="true"></i>
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>Instruments</p>
+                        <p>30+</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                            <img src="{% static 'images\Equipments.jpg' %}" style= "border-radius: 50%">
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>Equipments Listed</p>
+                        <p>300+</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🐟
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>fish</p>
+                        <p>Unicode: U+1F41F</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🐠
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>tropical fish</p>
+                        <p>Unicode: U+1F420</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🐡
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>blowfish</p>
+                        <p>Unicode: U+1F421</p>
+                        </div>
+                    </div>
+                    <div class='carousel__item'>
+                        <div class='carousel__item-head'>
+                        🦈
+                        </div>
+                        <div class='carousel__item-body'>
+                        <p class='title'>shark</p>
+                        <p>Unicode: U+1F988</p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>   
+            </div>   
+            </div>        
+        </section>
+    </div> 
+</div>       
+
+
+    <style>
+
+        #about_cards{
+            margin-top: 20%;
+        }
+
+        *, *::before, *::after {
+        box-sizing: border-box;
+        }
+
+        .carousel__item img{
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        body {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        height: 100vh;
+        }
+
+        /* .wrapper {
+        background: linear-gradient(60deg, #420285, #08BDBD);
+        height: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        } */
+
+        .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 0 20% 0;
+        }
+
+        .carousel__item {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        filter: drop-shadow(0 2px 2px #555);
+        will-change: transform, opacity;
+        -webkit-animation: carousel-animate-vertical 27s linear infinite;
+                animation: carousel-animate-vertical 27s linear infinite;
+        }
+
+        .carousel__item:nth-child(1) {
+        -webkit-animation-delay: calc(3s * -1);
+                animation-delay: calc(3s * -1);
+        }
+
+        .carousel__item:nth-child(2) {
+        -webkit-animation-delay: calc(3s * 0);
+                animation-delay: calc(3s * 0);
+        }
+
+        .carousel__item:nth-child(3) {
+        -webkit-animation-delay: calc(3s * 1);
+                animation-delay: calc(3s * 1);
+        }
+
+        .carousel__item:nth-child(4) {
+        -webkit-animation-delay: calc(3s * 2);
+                animation-delay: calc(3s * 2);
+        }
+
+        .carousel__item:nth-child(5) {
+        -webkit-animation-delay: calc(3s * 3);
+                animation-delay: calc(3s * 3);
+        }
+
+        .carousel__item:nth-child(6) {
+        -webkit-animation-delay: calc(3s * 4);
+                animation-delay: calc(3s * 4);
+        }
+
+        .carousel__item:last-child {
+        -webkit-animation-delay: calc(-3s * 2);
+                animation-delay: calc(-3s * 2);
+        }
+
+        .carousel__item-head {
+        border-radius: 50%;
+        background-color: #d7f7fc;
+        width: 90px;
+        height: 90px;
+        padding: 14px;
+        position: relative;
+        margin-right: -45px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        }
+
+        .carousel__item-body {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 16px 20px 16px 70px;
+        }
+
+        .title {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-top: 10px;
+        }
+
+        @-webkit-keyframes carousel-animate-vertical {
+        0% {
+            transform: translateY(100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        3%, 11.1111111111% {
+            transform: translateY(100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        14.1111111111%, 22.2222222222% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        25.2222222222%, 33.3333333333% {
+            transform: translateY(-100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        36.3333333333% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: visible;
+        }
+        100% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        }
+
+        @keyframes carousel-animate-vertical {
+        0% {
+            transform: translateY(100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        3%, 11.1111111111% {
+            transform: translateY(100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        14.1111111111%, 22.2222222222% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        25.2222222222%, 33.3333333333% {
+            transform: translateY(-100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        36.3333333333% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: visible;
+        }
+        100% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        }
+    </style>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+        @-webkit-keyframes buttonHover {
+        100% {
+            transform: translateX(145%);
+        }
+        }
+        @keyframes buttonHover {
+        100% {
+            transform: translateX(145%);
+        }
+        }
+        @-webkit-keyframes moveCard {
+        95% {
+            left: 0;
+        }
+        100% {
+            left: 100%;
+        }
+        }
+        @keyframes moveCard {
+        95% {
+            left: 0;
+        }
+        100% {
+            left: 100%;
+        }
+        }
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        color: inherit;
+        list-style: none;
+        }
+
+        html,
+        body {
+        margin: 0;
+        padding: 0;
+        }
+
+        main {
+        display: block;
+        }
+
+        a {
+        text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            padding: 4%;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        html {
+        font-size: 10px;
+        font-family: "PT Sans", sans-serif;
+        }
+
+        body {
+        background-color: black;
+        overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        }
+
+        #app {
+            background-image: url("https://wallpapercave.com/wp/wp5095618.jpg");
+            background-size: cover;
+            width: 96%;
+            max-width: 1920px;
+            min-width: 320px;
+            overflow: hidden;
+            margin: 2%;
+            opacity: 0.5;
+        }     
+
+        section {
+        display: flex;
+        width: 80%;
+        padding: 100px 0;
+        margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+        section {
+            flex-wrap: wrap;
+            width: 84%;
+        }
+        }
+        section .text {
+        flex-basis: 50%;
+        margin-right: 12%;
+        position: relative;
+        z-index: 2;
+        }
+        @media (max-width: 768px) {
+        section .text {
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-bottom: 16%;
+        }
+        }
+        section .text h2 {
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin-bottom: 20px;
+        }
+        @media (max-width: 940px) {
+        section .text h2 {
+            font-size: 5rem;
+        }
+        }
+        section .text p {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        }
+        @media (max-width: 940px) {
+        section .text p {
+            font-size: 1.6rem;
+        }
+        }
+        section .text a {
+        display: inline-block;
+        background-color: #000;
+        padding: 16px 40px;
+        border-radius: 40px;
+        overflow: hidden;
+        }
+        section .text a span {
+        display: block;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        position: relative;
+        width: 100%;
+        transform: translateX(0);
+        -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        }
+        @media (max-width: 940px) {
+        section .text a span {
+            font-size: 1.3rem;
+        }
+        }
+        section .text a span::before {
+        content: "VIEW MORE!";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-145%);
+        }
+        section .text a:hover span {
+        -webkit-animation: buttonHover linear 2s infinite;
+                animation: buttonHover linear 2s infinite;
+        }
+        section .carousel {
+        flex-basis: 50%;
+        height: 500px;
+        position: relative;
+        }
+        @media (max-width: 768px) {
+        section .carousel {
+            flex-basis: 100%;
+            height: 400px;
+        }
+        }
+        section .carousel .card {
+        width: 100%;
+        max-width: 450px;
+        position: absolute;
+        top: 0;
+        left: 200%;
+        opacity: 0;
+        -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        transform-origin: bottom center;
+        transition: left 0.5s, opacity 0.5s, transform 0.5s;
+        }
+        @media (max-width: 768px) {
+        section .carousel .card {
+            max-width: 350px;
+        }
+        }
+        section .carousel .card.c1 {
+        transform: translateX(-50%) rotate(15deg);
+        }
+        section .carousel .card.c2 {
+        transform: translateX(-50%) rotate(-15deg);
+        transition-delay: 0.2s;
+        }
+        section .carousel .card.c3 {
+        transform: translateX(-50%) rotate(0deg);
+        transition-delay: 0.4s;
+        }
+        section .carousel .card.active {
+        left: 50%;
+        opacity: 1;
+        }
+        section .carousel .card.move {
+        left: 0;
+        opacity: 0;
+        transition-delay: 0s;
+        }
+        section .carousel .card.stage {
+        transform: translateX(-50%) rotate(0deg);
+        transition-delay: 0s;
+        }
+    </style>
+    
+    
     <!-- about section -->
     <div class="about">        
         <div class="mouse"></div>
@@ -408,9 +914,6 @@
             font-size: 6rem;
             margin-bottom: 10%;
         }
-
-
-
 
         #app {
         width: 100%;
